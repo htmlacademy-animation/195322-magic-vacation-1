@@ -32,7 +32,10 @@ export default () => {
           }
         },
         observer: true,
-        observeParents: true
+        observeParents: true,
+        slideActiveClass: `slider__item--active`,
+        slidePrevClass: `slider__item--previous`,
+        slideNextClass: `slider__item--next`,
       });
     } else {
       storySlider = new Swiper(`.js-slider`, {
@@ -66,7 +69,10 @@ export default () => {
           }
         },
         observer: true,
-        observeParents: true
+        observeParents: true,
+        slideActiveClass: `slider__item--active`,
+        slidePrevClass: `slider__item--previous`,
+        slideNextClass: `slider__item--next`,
       });
     }
   };
