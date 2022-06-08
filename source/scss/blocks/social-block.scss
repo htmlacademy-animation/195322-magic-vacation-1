@@ -1,12 +1,22 @@
-.social-block {
-  position: relative;
+$social-block--links-count: 3;
 
-  &:hover {
-    .social-block__list {
+@mixin show-social-links {
+  pointer-events: auto;
+
+  @for $i from 1 through $social-block--links-count {
+    li:nth-child(#{$i}) {
       opacity: 1;
-      pointer-events: auto;
+      transform: translateY(0);
+      transition-property: opacity, transform;
+      transition-duration: 0.45s, 0.4s;
+      transition-timing-function: ease-in-out, ease-in-out;
+      transition-delay: #{0.15s * $i}, #{0.15s * $i};
     }
   }
+}
+
+.social-block {
+  position: relative;
 }
 
 .social-block__toggler {
@@ -17,6 +27,10 @@
   height: 4rem;
   color: $c-dark;
   border-radius: 50%;
+  transition-property: color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0.1s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -35,6 +49,9 @@
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
+    transition-property: width, height, background-color, border-color;
+    transition-duration: 0.4s;
+    transition-timing-function: ease-in-out;
   }
 
   svg {
@@ -63,6 +80,7 @@
     }
 
     & + .social-block__list {
+      @include show-social-links();
       opacity: 1;
       pointer-events: auto;
     }
@@ -79,6 +97,15 @@
       border-color: $c-purple;
     }
   }
+
+  .social-block--active &:not(:hover) {
+    color: $c-light;
+
+    &::before {
+      background-color: $c-purple;
+      border-color: $c-purple;
+    }
+  }
 }
 
 .social-block__list {
@@ -89,6 +116,9 @@
   margin-top: 1.5rem;
   opacity: 0;
   pointer-events: none;
+  transition-property: opacity;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
@@ -138,12 +168,15 @@
   }
 
   .social-block--active & {
+    @include show-social-links();
     opacity: 1;
     pointer-events: auto;
   }
 
   li {
     flex: none;
+    opacity: 0;
+    transform: translateY(20px);
     margin-bottom: 0.5rem;
 
     @media (min-width: $stop-scaling) {
@@ -168,6 +201,9 @@
   color: $c-light;
   border: 2px solid transparent;
   border-radius: 50%;
+  transition-property: color;
+  transition-duration: 0.4s;
+  transition-timing-function: ease-out;
 
   @media (min-width: $stop-scaling) {
     width: 40px;
