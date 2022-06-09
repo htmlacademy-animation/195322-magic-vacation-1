@@ -41,17 +41,26 @@ $social-block--links-count: 3;
   }
 
   &::before {
-    @include center;
     content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
     width: 100%;
     height: 100%;
     border-radius: 50%;
     background-color: $c-light;
     border: 2px solid $c-light;
     z-index: -1;
-    transition-property: width, height, background-color, border-color;
+    transform: translate(-50%, -50%) scale(0);
+    transition-property: transform, background-color, border-color;
     transition-duration: 0.4s;
     transition-timing-function: ease-in-out;
+
+    .page-body--ready & {
+      transform: translate(-50%, -50%) scale(1);
+      transition-timing-function: cubic-bezier(0.18, 1.95, 1, 0.8);
+      transition-delay: 0.4s;
+    }
   }
 
   svg {
@@ -66,8 +75,7 @@ $social-block--links-count: 3;
     color: $c-purple;
 
     &::before {
-      width: 112.5%;
-      height: 112.5%;
+      transform: translate(-50%, -50%) scale(1.125);
     }
   }
 
@@ -91,10 +99,9 @@ $social-block--links-count: 3;
     color: $c-light;
 
     &::before {
-      width: 100%;
-      height: 100%;
       background-color: $c-purple;
       border-color: $c-purple;
+      transform: translate(-50%, -50%) scale(1);
     }
   }
 
@@ -278,3 +285,17 @@ $social-block--links-count: 3;
     }
   }
 }
+
+// @keyframes appearance-with-pulsation {
+//   0% {
+//     transform: scale(0);
+//   }
+
+//   50% {
+//     transform: scale(1.125);
+//   }
+
+//   100% {
+//     transform: scale(1);
+//   }
+// }

@@ -35,6 +35,13 @@
   padding: 1rem 0;
   width: 10rem;
   color: $c-light;
+  opacity: 0;
+  transform: translateX(-50px);
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: $ease-slide-in-timing-function;
+  transition-delay: 0.2s;
+  will-change: transform;
 
   @media (min-width: $stop-scaling) {
     top: -5px;
@@ -62,6 +69,11 @@
     .page-header--menu-opened & {
       color: $c-dark;
     }
+  }
+
+  .page-body--ready & {
+    opacity: 1;
+    transform: translateX(0);
   }
 
   svg {
@@ -130,6 +142,12 @@
 .page-header__nav {
   display: flex;
   align-items: center;
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: $ease-slide-in-timing-function;
+  transition-delay: 0.4s;
+  will-change: transform;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     position: fixed;
@@ -167,6 +185,10 @@
     .page-header--menu-opened & {
       transform: translateX(0);
     }
+  }
+
+  .page-body--ready & {
+    opacity: 1;
   }
 }
 
@@ -272,9 +294,10 @@
     }
 
     &.active {
-      &::after {
+      .page-body--ready &::after {
         transform-origin: left top;
         transform: scaleX(1);
+        transition-delay: 0.4s;
       }
     }
 
