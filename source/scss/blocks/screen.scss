@@ -297,6 +297,25 @@
   }
 }
 
+.screen__bg {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $c-dark;
+  transform: translateY(100%);
+  transition-property: transform;
+  transition-duration: 0.35s;
+  transition-timing-function: ease-out;
+  will-change: transform;
+
+  .screen.screen--with-bg & {
+    transform: translateY(0);
+  }
+}
+
 .screen--story {
   background-color: $c-dark;
   background-image: url("../img/slide1.jpg"), url("../img/slide2.jpg"), url("../img/slide3.jpg"), url("../img/slide4.jpg");
