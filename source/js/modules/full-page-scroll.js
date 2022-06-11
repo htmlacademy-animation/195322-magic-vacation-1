@@ -2,6 +2,8 @@ import throttle from 'lodash/throttle';
 
 export default class FullPageScroll {
   constructor() {
+    this.HIDDEN_SCREEN_CLASS_NAME = `screen--hidden`;
+    this.ACTIVE_SCREEN_CLASS_NAME = `active`;
     this.THROTTLE_TIMEOUT = 1000;
     this.scrollFlag = true;
     this.timeout = null;
@@ -52,21 +54,47 @@ export default class FullPageScroll {
   }
 
   changeVisibilityDisplay() {
+    let isHistoryScreenActive = false;
+    const historyScreenTransitionTimeout = 500;
+    const fillBgScreenClassName = `screen--with-bg`;
+
     this.screenElements.forEach((screen) => {
-      screen.classList.add(`screen--hidden`);
-      screen.classList.remove(`active`);
+      if (screen.id === `story` && screen.classList.contains(this.ACTIVE_SCREEN_CLASS_NAME)) {
+        isHistoryScreenActive = true;
+        screen.classList.remove(this.ACTIVE_SCREEN_CLASS_NAME);
+        screen.classList.add(fillBgScreenClassName);
+
+        setTimeout(() => {
+          screen.classList.add(this.HIDDEN_SCREEN_CLASS_NAME);
+          screen.classList.remove(fillBgScreenClassName);
+        }, historyScreenTransitionTimeout);
+      } else {
+        screen.classList.add(this.HIDDEN_SCREEN_CLASS_NAME);
+        screen.classList.remove(this.ACTIVE_SCREEN_CLASS_NAME);
+      }
     });
-    this.screenElements[this.activeScreen].classList.remove(`screen--hidden`);
+
+    if (isHistoryScreenActive) {
+      setTimeout(() => {
+        this.setActiveScreen();
+      }, historyScreenTransitionTimeout);
+    } else {
+      this.setActiveScreen();
+    }
+  }
+
+  setActiveScreen() {
+    this.screenElements[this.activeScreen].classList.remove(this.HIDDEN_SCREEN_CLASS_NAME);
     setTimeout(() => {
-      this.screenElements[this.activeScreen].classList.add(`active`);
+      this.screenElements[this.activeScreen].classList.add(this.ACTIVE_SCREEN_CLASS_NAME);
     }, 100);
   }
 
   changeActiveMenuItem() {
     const activeItem = Array.from(this.menuElements).find((item) => item.dataset.href === this.screenElements[this.activeScreen].id);
     if (activeItem) {
-      this.menuElements.forEach((item) => item.classList.remove(`active`));
-      activeItem.classList.add(`active`);
+      this.menuElements.forEach((item) => item.classList.remove(this.ACTIVE_SCREEN_CLASS_NAME));
+      activeItem.classList.add(this.ACTIVE_SCREEN_CLASS_NAME);
     }
   }
 
