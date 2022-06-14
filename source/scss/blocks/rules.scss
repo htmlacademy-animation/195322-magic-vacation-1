@@ -9,7 +9,7 @@ $rules-items-count: 4;
         animation-name:  appearance-of-item-bullet;
         animation-duration: 0.55s;
         animation-timing-function: ease-out;
-        animation-delay: #{0.9s + 0.15s * $i};
+        animation-delay: #{0.65s + 0.15s * $i};
         animation-fill-mode: both;
         will-change: transform;
       }
@@ -18,7 +18,7 @@ $rules-items-count: 4;
         animation-name: appearance-of-item-text;
         animation-duration: 0.55s;
         animation-timing-function: ease-out;
-        animation-delay: #{0.9s + 0.2s * $i};
+        animation-delay: #{0.65s + 0.2s * $i};
         animation-fill-mode: both;
         will-change: transform;
       }
@@ -90,9 +90,9 @@ $rules-items-count: 4;
   opacity: 1;
   transform: translateY(0);
   transition-property: opacity, transform;
-  transition-duration: 0.55s, 0.5s;
+  transition-duration: 0.45s, 0.4s;
   transition-timing-function: ease-out, ease-out;
-  transition-delay: 0.35s, 0.1s;
+  transition-delay: 0.2s, 0s;
   will-change: transform;
 
   @media (min-width: $stop-scaling) {
@@ -237,7 +237,7 @@ $rules-items-count: 4;
   animation-name: appearance-of-link;
   animation-duration: 0.75s;
   animation-timing-function: ease-in-out;
-  animation-delay: 2s;
+  animation-delay: 1.85s;
   animation-fill-mode: both;
 
   @media (min-width: $stop-scaling) {
