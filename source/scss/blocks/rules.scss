@@ -1,3 +1,42 @@
+$rules-items-count: 4;
+
+@mixin show-rules-list-items {
+  pointer-events: auto;
+
+  @for $i from 1 through $rules-items-count {
+    &:nth-child(#{$i}) {
+      &::before {
+        animation-name:  appearance-of-item-bullet;
+        animation-duration: 0.55s;
+        animation-timing-function: ease-out;
+        animation-delay: #{0.15s * $i};
+        animation-fill-mode: both;
+        will-change: transform;
+      }
+    }
+  }
+}
+
+@keyframes appearance-of-item-bullet {
+  0% {
+    color: transparent;
+    transform: scale(0);
+  }
+
+  50% {
+    color: transparent;
+  }
+
+  75% {
+    transform: scale(1.225);
+  }
+
+  100% {
+    color: $c-light;
+    transform: scale(1);
+  }
+}
+
 .rules {
   position: relative;
   flex-grow: 1;
@@ -195,6 +234,10 @@
     @media (max-width: $tablet) and (orientation: portrait) {
       min-height: calc(1.4rem * 2.2);
     }
+  }
+
+  .page-body--ready & {
+    @include show-rules-list-items();
   }
 }
 
