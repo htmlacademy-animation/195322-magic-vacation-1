@@ -9,31 +9,20 @@ $rules-items-count: 4;
         animation-name:  appearance-of-item-bullet;
         animation-duration: 0.55s;
         animation-timing-function: ease-out;
-        animation-delay: #{0.15s * $i};
+        animation-delay: #{0.9s + 0.15s * $i};
+        animation-fill-mode: both;
+        will-change: transform;
+      }
+
+      p {
+        animation-name: appearance-of-item-text;
+        animation-duration: 0.55s;
+        animation-timing-function: ease-out;
+        animation-delay: #{0.9s + 0.2s * $i};
         animation-fill-mode: both;
         will-change: transform;
       }
     }
-  }
-}
-
-@keyframes appearance-of-item-bullet {
-  0% {
-    color: transparent;
-    transform: scale(0);
-  }
-
-  50% {
-    color: transparent;
-  }
-
-  75% {
-    transform: scale(1.225);
-  }
-
-  100% {
-    color: $c-light;
-    transform: scale(1);
   }
 }
 
@@ -103,7 +92,7 @@ $rules-items-count: 4;
   transition-property: opacity, transform;
   transition-duration: 0.55s, 0.5s;
   transition-timing-function: ease-out, ease-out;
-  transition-delay: 0.4s, 0.15s;
+  transition-delay: 0.35s, 0.1s;
   will-change: transform;
 
   @media (min-width: $stop-scaling) {
@@ -264,5 +253,38 @@ $rules-items-count: 4;
   @media (max-width: $mobile) and (orientation: landscape) {
     bottom: 2rem;
     right: 1.5rem;
+  }
+}
+
+@keyframes appearance-of-item-bullet {
+  0% {
+    color: transparent;
+    transform: scale(0);
+  }
+
+  50% {
+    color: transparent;
+  }
+
+  75% {
+    transform: scale(1.225);
+  }
+
+  100% {
+    color: $c-light;
+    transform: scale(1);
+  }
+}
+
+@keyframes appearance-of-item-text {
+  0%,
+  15% {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
