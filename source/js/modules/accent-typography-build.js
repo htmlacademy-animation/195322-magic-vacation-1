@@ -9,7 +9,7 @@ export default class AccentTypographyBuild {
    * @param { number } delay - задержка анимации для всего блока
    */
   constructor(elementSelector, timer, classForActivate, property, isOneWord, delay) {
-    this.ONE_LETTER_DURATION = 25;
+    this.ONE_LETTER_DURATION = 50;
 
     this.elementSelector = elementSelector;
     this.timer = timer;

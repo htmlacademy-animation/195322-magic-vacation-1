@@ -27,11 +27,11 @@ fullPageScroll.init();
 
 const introTitleAnimation = new AccentTypographyBuild(
     `.intro__title`,
-    500,
+    600,
     `active-animation`,
     `transform`,
     false,
-    900
+    1000
 );
 
 const contestDateAnimation = new AccentTypographyBuild(
@@ -40,7 +40,7 @@ const contestDateAnimation = new AccentTypographyBuild(
     `active-animation`,
     `transform`,
     true,
-    1100
+    2400
 );
 
 const historyTitleAnimation = new AccentTypographyBuild(
@@ -49,8 +49,8 @@ const historyTitleAnimation = new AccentTypographyBuild(
     `active-animation`,
     `transform`,
     true,
-    0)
-  ;
+    0
+);
 
 const prizesTitleAnimation = new AccentTypographyBuild(
     `.prizes__title`,
