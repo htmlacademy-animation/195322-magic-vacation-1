@@ -9,6 +9,7 @@ import result from './modules/result.js';
 import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
+import AccentTypographyBuild from './modules/accent-typography-build';
 
 // init modules
 document();
@@ -23,3 +24,44 @@ social();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+const introTitleAnimation = new AccentTypographyBuild(
+    `.intro__title`,
+    500,
+    `active-animation`,
+    `transform`,
+    false,
+    900
+);
+
+const contestDateAnimation = new AccentTypographyBuild(
+    `.intro__date`,
+    500,
+    `active-animation`,
+    `transform`,
+    true,
+    1100
+);
+
+const historyTitleAnimation = new AccentTypographyBuild(
+    `.slider__item-title`,
+    500,
+    `active-animation`,
+    `transform`,
+    true,
+    0)
+  ;
+
+const prizesTitleAnimation = new AccentTypographyBuild(
+    `.prizes__title`,
+    500,
+    `active-animation`,
+    `transform`,
+    true,
+    0
+);
+
+introTitleAnimation.runAnimation();
+contestDateAnimation.runAnimation();
+historyTitleAnimation.runAnimation();
+prizesTitleAnimation.runAnimation();
