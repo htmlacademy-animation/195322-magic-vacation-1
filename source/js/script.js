@@ -61,7 +61,27 @@ const prizesTitleAnimation = new AccentTypographyBuild(
     0
 );
 
+const rulesTitleAnimation = new AccentTypographyBuild(
+    `.rules__title`,
+    500,
+    `active-animation`,
+    `transform`,
+    true,
+    0
+);
+
+const gameTitleAnimation = new AccentTypographyBuild(
+    `.game__title`,
+    500,
+    `active-animation`,
+    `transform`,
+    true,
+    0
+);
+
 introTitleAnimation.runAnimation();
 contestDateAnimation.runAnimation();
 historyTitleAnimation.runAnimation();
 prizesTitleAnimation.runAnimation();
+rulesTitleAnimation.runAnimation();
+gameTitleAnimation.runAnimation();
