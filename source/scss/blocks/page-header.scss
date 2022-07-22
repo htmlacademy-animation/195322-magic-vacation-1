@@ -38,7 +38,7 @@
   opacity: 0;
   transform: translateX(-50px);
   transition-property: opacity, transform;
-  transition-duration: 0.5s;
+  transition-duration: 0.35s;
   transition-timing-function: $ease-slide-in-timing-function;
   transition-delay: 0.2s;
   will-change: transform;
@@ -144,7 +144,7 @@
   align-items: center;
   opacity: 0;
   transition-property: opacity, transform;
-  transition-duration: 0.5s;
+  transition-duration: 0.4s;
   transition-timing-function: $ease-slide-in-timing-function;
   transition-delay: 0.4s;
   will-change: transform;
@@ -276,7 +276,7 @@
       transform-origin: right top;
       transform: scaleX(0);
       transition-property: background-color, transform;
-      transition-duration: 0.5s, 0.5s;
+      transition-duration: 0.4s, 0.4s;
       transition-timing-function: ease-in-out, ease-in-out;
       will-change: transform;
 
@@ -297,7 +297,7 @@
       .page-body--ready &::after {
         transform-origin: left top;
         transform: scaleX(1);
-        transition-delay: 0.4s;
+        transition-delay: 0.6s;
       }
     }
 

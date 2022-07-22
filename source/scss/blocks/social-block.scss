@@ -40,6 +40,10 @@ $social-block--links-count: 3;
     display: none;
   }
 
+  .page-body--ready & {
+    transition-delay: 0.6s;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -53,13 +57,13 @@ $social-block--links-count: 3;
     z-index: -1;
     transform: translate(-50%, -50%) scale(0);
     transition-property: transform, background-color, border-color;
-    transition-duration: 0.4s;
+    transition-duration: 0.35s;
     transition-timing-function: ease-in-out;
 
     .page-body--ready & {
       transform: translate(-50%, -50%) scale(1);
       transition-timing-function: cubic-bezier(0.18, 1.95, 1, 0.8);
-      transition-delay: 0.4s;
+      transition-delay: 0.7s;
     }
   }
 
