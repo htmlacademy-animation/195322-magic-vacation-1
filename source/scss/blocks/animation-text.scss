@@ -1,0 +1,27 @@
+.animation-text__word {
+  display: inline-block;
+  padding: 5px 0 0;
+  overflow: hidden;
+
+  & > span {
+    display: inline-block;
+    transform: translate3d(0, 1.2em, 0);
+    will-change: transform;
+  }
+}
+
+.screen.active .animation-text__word > span {
+  transform: translate3d(0, 0, 0);
+}
+
+.intro__title > .animation-text__word {
+  letter-spacing: -8px;
+
+  &:first-child {
+    padding: 26px 0 0;
+  }
+}
+
+.intro__date.active-animation > .animation-text__word > span.space {
+  width: 10px;
+}

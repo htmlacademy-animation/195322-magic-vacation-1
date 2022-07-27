@@ -134,22 +134,77 @@
 
 .form--result {
   .form__field {
-    width: calc(100% - 31rem);
+    --result-width: calc(100% - 31rem);
+
+    width: 0;
+    animation-name: show-input-field;
+    animation-duration: 0.5s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-delay: 2.3s;
+
+    &::placeholder {
+      opacity: 0;
+      transition: opacity 0.3s ease 2.8s;
+
+      .screen--show & {
+        opacity: 1;
+      }
+    }
 
     @media (min-width: $stop-scaling) {
-      width: calc(100% - 310px);
+      --result-width: calc(100% - 310px);
     }
 
     @media (orientation: portrait) {
-      width: calc(100% - 5rem);
+      --result-width: calc(100% - 5rem);
     }
 
     @media (max-width: $tablet) and (orientation: landscape) {
-      width: calc(100% - 9rem);
+      --result-width: calc(100% - 9rem);
     }
 
     @media (max-width: $mobile) and (orientation: landscape) {
-      width: calc(100% - 5rem);
+      --result-width: calc(100% - 5rem);
     }
+  }
+
+  .form__button {
+    animation-name: show-input-button;
+    animation-duration: 0.4s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+    animation-timing-function: ease;
+  }
+}
+
+@keyframes show-input-field {
+  0% {
+    opacity: 0;
+    width: 0;
+  }
+
+  10% {
+    opacity: 1;
+  }
+
+  100% {
+    width: var(--result-width);
+  }
+}
+
+@keyframes show-input-button {
+  0% {
+    opacity: 0;
+    color: transparent;
+  }
+
+  40% {
+    opacity: 1;
+    color: transparent;
+  }
+
+  100% {
+    color: $c-dark;
   }
 }
