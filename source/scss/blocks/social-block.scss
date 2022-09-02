@@ -44,6 +44,18 @@ $social-block--links-count: 3;
     transition-delay: 0.6s;
   }
 
+  .page-body--ready.page-body--story-chapter-second & {
+    color: $c-united-nations-blue-dark;
+  }
+
+  .page-body--ready.page-body--story-chapter-third & {
+    color: $c-blue-gray-dark;
+  }
+
+  .page-body--ready.page-body--story-chapter-fourth & {
+    color: $c-heliotrope-dark;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -81,6 +93,18 @@ $social-block--links-count: 3;
     &::before {
       transform: translate(-50%, -50%) scale(1.125);
     }
+
+    .page-body--ready.page-body--story-chapter-second & {
+      color: $c-united-nations-blue;
+    }
+
+    .page-body--ready.page-body--story-chapter-third & {
+      color: $c-blue-gray;
+    }
+
+    .page-body--ready.page-body--story-chapter-fourth & {
+      color: $c-heliotrope;
+    }
   }
 
   &:focus {
@@ -89,6 +113,18 @@ $social-block--links-count: 3;
 
     &::before {
       border-color: $c-purple;
+
+      .page-body--ready.page-body--story-chapter-second & {
+        border-color: $c-united-nations-blue;
+      }
+
+      .page-body--ready.page-body--story-chapter-third & {
+        border-color: $c-blue-gray;
+      }
+
+      .page-body--ready.page-body--story-chapter-fourth & {
+        border-color: $c-heliotrope;
+      }
     }
 
     & + .social-block__list {
@@ -102,19 +138,61 @@ $social-block--links-count: 3;
   &:active:focus {
     color: $c-light;
 
+    .page-body--ready.page-body--story-chapter-second &,
+    .page-body--ready.page-body--story-chapter-third &,
+    .page-body--ready.page-body--story-chapter-fourth & {
+      color: $c-light;
+    }
+
     &::before {
       background-color: $c-purple;
       border-color: $c-purple;
       transform: translate(-50%, -50%) scale(1);
+
+      .page-body--ready.page-body--story-chapter-second & {
+        background-color: $c-united-nations-blue;
+        border-color: $c-united-nations-blue;
+      }
+
+      .page-body--ready.page-body--story-chapter-third & {
+        background-color: $c-blue-gray;
+        border-color: $c-blue-gray;
+      }
+
+      .page-body--ready.page-body--story-chapter-fourth & {
+        background-color: $c-heliotrope;
+        border-color: $c-heliotrope;
+      }
     }
   }
 
   .social-block--active &:not(:hover) {
     color: $c-light;
 
+    .page-body--ready.page-body--story-chapter-second &,
+    .page-body--ready.page-body--story-chapter-third &,
+    .page-body--ready.page-body--story-chapter-fourth & {
+      color: $c-light;
+    }
+
     &::before {
       background-color: $c-purple;
       border-color: $c-purple;
+
+      .page-body--ready.page-body--story-chapter-second & {
+        background-color: $c-united-nations-blue;
+        border-color: $c-united-nations-blue;
+      }
+
+      .page-body--ready.page-body--story-chapter-third & {
+        background-color: $c-blue-gray;
+        border-color: $c-blue-gray;
+      }
+
+      .page-body--ready.page-body--story-chapter-fourth & {
+        background-color: $c-heliotrope;
+        border-color: $c-heliotrope;
+      }
     }
   }
 }
@@ -233,6 +311,18 @@ $social-block--links-count: 3;
 
   &:hover {
     color: $c-purple;
+
+    .page-body--ready.page-body--story-chapter-second & {
+      color: $c-united-nations-blue;
+    }
+
+    .page-body--ready.page-body--story-chapter-third & {
+      color: $c-blue-gray;
+    }
+
+    .page-body--ready.page-body--story-chapter-fourth & {
+      color: $c-heliotrope;
+    }
   }
 
   &:focus {
@@ -240,6 +330,21 @@ $social-block--links-count: 3;
     background-color: $c-light;
     border-color: $c-purple;
     outline: none;
+
+    .page-body--ready.page-body--story-chapter-second & {
+      color: $c-united-nations-blue;
+      border-color: $c-united-nations-blue;
+    }
+
+    .page-body--ready.page-body--story-chapter-third & {
+      color: $c-blue-gray;
+      border-color: $c-blue-gray;
+    }
+
+    .page-body--ready.page-body--story-chapter-fourth & {
+      color: $c-heliotrope;
+      border-color: $c-heliotrope;
+    }
   }
 
   &:active,
@@ -247,6 +352,21 @@ $social-block--links-count: 3;
     color: $c-purple;
     background-color: $c-light;
     border-color: $c-light;
+
+    .page-body--ready.page-body--story-chapter-second & {
+      color: $c-united-nations-blue;
+      border-color: $c-light;
+    }
+
+    .page-body--ready.page-body--story-chapter-third & {
+      color: $c-blue-gray;
+      border-color: $c-light;
+    }
+
+    .page-body--ready.page-body--story-chapter-fourth & {
+      color: $c-heliotrope;
+      border-color: $c-light;
+    }
   }
 
   svg {

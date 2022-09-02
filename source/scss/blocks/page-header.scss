@@ -313,6 +313,39 @@
         transform: scaleX(1);
       }
     }
+
+    .page-body--ready.page-body--story-chapter-second & {
+      &:hover,
+      &:focus {
+        color: $c-united-nations-blue;
+
+        &::after {
+          background-color: $c-united-nations-blue;
+        }
+      }
+    }
+
+    .page-body--ready.page-body--story-chapter-third & {
+      &:hover,
+      &:focus {
+        color: $c-blue-gray;
+
+        &::after {
+          background-color: $c-blue-gray;
+        }
+      }
+    }
+
+    .page-body--ready.page-body--story-chapter-fourth & {
+      &:hover,
+      &:focus {
+        color: $c-heliotrope;
+
+        &::after {
+          background-color: $c-heliotrope;
+        }
+      }
+    }
   }
 }
 
