@@ -237,6 +237,22 @@
   line-height: 1.2;
   color: $c-light;
 
+  .screen--result.screen--show & {
+    animation-name: show-result-button;
+    animation-duration: 0.7s;
+    animation-fill-mode: both;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.75s;
+
+    span {
+      animation-name: roll-in-result-button;
+      animation-duration: 0.5s;
+      animation-fill-mode: both;
+      animation-timing-function: ease-in-out;
+      animation-delay: 0.75s;
+    }
+  }
+
   @media (min-width: $stop-scaling) {
     margin: auto auto 10px;
     min-width: 340px;
@@ -503,6 +519,28 @@
 
   80% {
     transform: rotate(-1deg);
+  }
+
+  100% {
+    transform: none;
+  }
+}
+
+@keyframes show-result-button {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes roll-in-result-button {
+  0% {
+    transform: translateX(50px) rotate(180deg);
   }
 
   100% {
