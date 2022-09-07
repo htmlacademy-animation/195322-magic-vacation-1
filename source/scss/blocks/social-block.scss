@@ -30,7 +30,6 @@ $social-block--links-count: 3;
   transition-property: color;
   transition-duration: 0.4s;
   transition-timing-function: ease-in-out;
-  transition-delay: 0.1s;
 
   @media (max-width: $tablet) and (orientation: portrait) {
     display: none;
@@ -38,10 +37,6 @@ $social-block--links-count: 3;
 
   @media (max-width: $mobile) and (orientation: landscape) {
     display: none;
-  }
-
-  .page-body--ready & {
-    transition-delay: 0.6s;
   }
 
   .page-body--ready.page-body--story-chapter-second & {
@@ -75,7 +70,6 @@ $social-block--links-count: 3;
     .page-body--ready & {
       transform: translate(-50%, -50%) scale(1);
       transition-timing-function: cubic-bezier(0.18, 1.95, 1, 0.8);
-      transition-delay: 0.7s;
     }
   }
 

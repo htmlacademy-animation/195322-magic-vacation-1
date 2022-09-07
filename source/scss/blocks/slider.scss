@@ -343,7 +343,7 @@
 
 @keyframes roll-in-left {
   0% {
-    transform: translate3d(-100px, 0, 0) rotate(-220deg);
+    transform: translateX(-100px) rotate(-220deg);
     opacity: 0;
     color: transparent;
   }
@@ -353,7 +353,7 @@
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(0);
+    transform: translateX(0) rotate(0);
     opacity: 0.5;
     color: $c-dark;
   }
@@ -361,7 +361,7 @@
 
 @keyframes roll-in-right {
   0% {
-    transform: translate3d(100px, 0, 0) rotate(220deg);
+    transform: translateX(100px) rotate(220deg);
     opacity: 0;
     color: transparent;
   }
@@ -371,7 +371,7 @@
   }
 
   100% {
-    transform: translate3d(0, 0, 0) rotate(0);
+    transform: translateX(0) rotate(0);
     opacity: 1;
     color: $c-dark;
   }
