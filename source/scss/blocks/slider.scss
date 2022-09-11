@@ -261,6 +261,22 @@
     opacity: 0.5;
     pointer-events: none;
   }
+
+  .screen--story.active & {
+    opacity: 1;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.08, 0.45, 0.4, 1.35);
+    will-change: transform;
+
+    &.slider__control--prev {
+      animation-name: roll-in-left;
+    }
+
+    &.slider__control--next {
+      animation-name: roll-in-right;
+    }
+  }
 }
 
 .slider__pagination.swiper-pagination {
@@ -275,6 +291,12 @@
   font-weight: 400;
   font-size: 2.4rem;
   line-height: 4rem;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+  .screen--story.active & {
+    opacity: 1;
+  }
 
   @media (min-width: $stop-scaling) {
     bottom: 28px;
@@ -316,5 +338,41 @@
       height: 0.4rem;
       background-color: $c-light;
     }
+  }
+}
+
+@keyframes roll-in-left {
+  0% {
+    transform: translateX(-100px) rotate(-220deg);
+    opacity: 0;
+    color: transparent;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 0.5;
+    color: $c-dark;
+  }
+}
+
+@keyframes roll-in-right {
+  0% {
+    transform: translateX(100px) rotate(220deg);
+    opacity: 0;
+    color: transparent;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(0) rotate(0);
+    opacity: 1;
+    color: $c-dark;
   }
 }

@@ -6,6 +6,9 @@ export default () => {
   sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
 
   const setSlider = function () {
+    const STORY_CHAPTER_CLASS_BASE = `page-body--story-chapter`;
+    const pageBodyClasses = document.body.classList;
+
     if (((window.innerWidth / window.innerHeight) < 1) || window.innerWidth < 769) {
       storySlider = new Swiper(`.js-slider`, {
         pagination: {
@@ -18,12 +21,36 @@ export default () => {
         on: {
           slideChange: () => {
             if (storySlider.activeIndex === 0 || storySlider.activeIndex === 1) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-second`,
+                  `${STORY_CHAPTER_CLASS_BASE}-third`,
+                  `${STORY_CHAPTER_CLASS_BASE}-fourth`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-first`);
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg"), linear-gradient(180deg, rgba(83, 65, 118, 0) 0%, #523E75 16.85%)`;
             } else if (storySlider.activeIndex === 2 || storySlider.activeIndex === 3) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-first`,
+                  `${STORY_CHAPTER_CLASS_BASE}-third`,
+                  `${STORY_CHAPTER_CLASS_BASE}-fourth`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-second`);
               sliderContainer.style.backgroundImage = `url("img/slide2.jpg"), linear-gradient(180deg, rgba(45, 54, 179, 0) 0%, #2A34B0 16.85%)`;
             } else if (storySlider.activeIndex === 4 || storySlider.activeIndex === 5) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-first`,
+                  `${STORY_CHAPTER_CLASS_BASE}-second`,
+                  `${STORY_CHAPTER_CLASS_BASE}-fourth`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-third`);
               sliderContainer.style.backgroundImage = `url("img/slide3.jpg"), linear-gradient(180deg, rgba(92, 138, 198, 0) 0%, #5183C4 16.85%)`;
             } else if (storySlider.activeIndex === 6 || storySlider.activeIndex === 7) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-first`,
+                  `${STORY_CHAPTER_CLASS_BASE}-second`,
+                  `${STORY_CHAPTER_CLASS_BASE}-third`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-fourth`);
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg"), linear-gradient(180deg, rgba(45, 39, 63, 0) 0%, #2F2A42 16.85%)`;
             }
           },
@@ -55,12 +82,36 @@ export default () => {
         on: {
           slideChange: () => {
             if (storySlider.activeIndex === 0) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-second`,
+                  `${STORY_CHAPTER_CLASS_BASE}-third`,
+                  `${STORY_CHAPTER_CLASS_BASE}-fourth`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-first`);
               sliderContainer.style.backgroundImage = `url("img/slide1.jpg")`;
             } else if (storySlider.activeIndex === 2) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-first`,
+                  `${STORY_CHAPTER_CLASS_BASE}-third`,
+                  `${STORY_CHAPTER_CLASS_BASE}-fourth`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-second`);
               sliderContainer.style.backgroundImage = `url("img/slide2.jpg")`;
             } else if (storySlider.activeIndex === 4) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-first`,
+                  `${STORY_CHAPTER_CLASS_BASE}-second`,
+                  `${STORY_CHAPTER_CLASS_BASE}-fourth`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-third`);
               sliderContainer.style.backgroundImage = `url("img/slide3.jpg")`;
             } else if (storySlider.activeIndex === 6) {
+              pageBodyClasses.remove(
+                  `${STORY_CHAPTER_CLASS_BASE}-first`,
+                  `${STORY_CHAPTER_CLASS_BASE}-second`,
+                  `${STORY_CHAPTER_CLASS_BASE}-third`
+              );
+              pageBodyClasses.add(`${STORY_CHAPTER_CLASS_BASE}-fourth`);
               sliderContainer.style.backgroundImage = `url("img/slide4.jpg")`;
             }
           },
