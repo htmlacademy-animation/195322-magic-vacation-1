@@ -1,16 +1,16 @@
 <svg width="350" height="330" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   viewBox="0 0 350 330">
-  <g id="award-from">
+  <g id="awardFrom">
     <g id="dirigable">
-      <g id="dirigable-bottom" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
-        stroke-width="2">
+      <g id="dirigableBottom" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
         <path
           d="M175.44,249.28h48.36a13.27,13.27,0,0,0,13-10.65l3.74-18.32H172.36v25.89A3.09,3.09,0,0,0,175.44,249.28Z" />
         <path d="M235.79,241.69h-9.22a8.31,8.31,0,0,1-8.28-8.31V220.31" />
-        <path id="right-porthole"
-          d="M204.25,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.44,3.44,0,0,0,204.25,231.88Z" />
-        <animate id="enlargeWindowOpacity" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.001s"
-          fill="freeze" begin="2.2s" xlink:href="#right-porthole" />
+        <path id="rightPorthole"
+          d="M204.25,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.44,3.44,0,0,0,204.25,231.88Z">
+          <animate id="enlargeWindowOpacity" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.001s"
+            fill="freeze" begin="2.2s" />
+        </path>
         <path
           d="M185.64,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.45,3.45,0,0,0,185.64,231.88Z" />
         <animateTransform attributeName="transform" type="scale" values="1, 0.99; 1, 1; 1, 0.99; 1, 1; 1, 0.99"
@@ -19,7 +19,7 @@
           keyTimes="0; 0.3; 0.5; 0.7; 1" dur="2.2s" additive="sum" repeatCount="indefinite" begin="-1s" />
       </g>
 
-      <g id="top-fins-2">
+      <g id="topFins2">
         <path
           d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2a9,9,0,0,1,9-9"
           fill="#068e4d" />
@@ -29,7 +29,7 @@
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="2s"
           repeatCount="indefinite" />
       </g>
-      <g id="bottom-fins-2">
+      <g id="bottomFins2">
         <path
           d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2a9,9,0,0,0,9,9"
           fill="#068e4d" />
@@ -40,7 +40,7 @@
           repeatCount="indefinite" />
       </g>
 
-      <g id="dirigable-body">
+      <g id="dirigableBody">
         <path
           d="M205,227.08c43.38,0,74.86-15.55,74.86-37s-31.48-37-74.86-37c-27.94,0-55.36,13.53-73.46,24.87a14.3,14.3,0,0,0,0,24.21c18.09,11.33,45.52,24.87,73.46,24.87"
           fill="#068e4d" />
@@ -62,11 +62,10 @@
                 M 132.18 186.12 C 148.92 181.85 176.76 176.12 204.99 176.12 C 249.52 176.12 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249.15 205.18 205 205.18 C 176.77 205.18 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
                 M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17"
             begin="0s" dur="2s" repeatCount="indefinite" />
-
         </path>
       </g>
 
-      <g id="top-fins-1">
+      <g id="topFins1">
         <path
           d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2a9,9,0,0,1,9-9"
           fill="#068e4d" />
@@ -77,7 +76,7 @@
           repeatCount="indefinite" />
       </g>
 
-      <g id="bottom-fins-1">
+      <g id="bottomFins1">
         <path
           d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2a9,9,0,0,0,9,9"
           fill="#068e4d" />
@@ -90,26 +89,25 @@
     </g>
 
     <g id="clouds" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
-      <g id="cloud-1">
+      <g id="cloud1">
         <line x1="68.95" y1="107.8" x2="131.86" y2="107.8" />
         <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" />
       </g>
 
-      <g id="cloud-2" opacity="0">
+      <g id="cloud2" opacity="0">
         <line x1="258.96" y1="93.19" x2="298.74" y2="93.19" />
         <path d="M278.75,82.91H251.39a12.4,12.4,0,1,0-24.8,0H208.65" />
         <line x1="287.01" y1="82.91" x2="309.21" y2="82.91" />
       </g>
 
-      <animateTransform id="cloud-1-translate" attributeName="transform" type="translate" from="170 0" to="-50 0"
-        dur="1.5s" fill="freeze" xlink:href="#cloud-1" />
-      <animate id="cloud-1-opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0"
-        keyTimes="0; 0.15; 0.85; 1" dur="1.5s" fill="freeze" xlink:href="#cloud-1" />
-      <animateTransform id="cloud-2-translate" attributeName="transform" type="translate" from="200 0" to="-200 0"
-        dur="2.2s" fill="freeze" begin="cloud-1-translate.begin + 0.5s" xlink:href="#cloud-2" />
-      <animate id="cloud-2-opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0"
-        keyTimes="0; 0.35; 0.9; 1" dur="2.2s" fill="freeze" begin="cloud-1-translate.begin + 0.5s"
-        xlink:href="#cloud-2" />
+      <animateTransform id="cloud1Translate" attributeName="transform" type="translate" from="170 0" to="-50 0"
+        dur="1.5s" fill="freeze" xlink:href="#cloud1" />
+      <animate id="cloud1Opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0"
+        keyTimes="0; 0.15; 0.85; 1" dur="1.5s" fill="freeze" xlink:href="#cloud1" />
+      <animateTransform id="cloud2Translate" attributeName="transform" type="translate" from="200 0" to="-200 0"
+        dur="2.2s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2" />
+      <animate id="cloud2Opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0"
+        keyTimes="0; 0.35; 0.9; 1" dur="2.2s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2" />
     </g>
 
     <defs>
@@ -119,15 +117,15 @@
     </defs>
     <g id="tail" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"
       clip-path="url(#tail)">
-      <line id="top-tail" x1="106.25" y1="179.49" x2="84.05" y2="179.49">
+      <line id="topTail" x1="106.25" y1="179.49" x2="84.05" y2="179.49">
         <animateTransform id="topTailScale" attributeName="transform" type="translate" values="1 0; 10 0; 1 0"
           keyTimes="0; 0.5; 1" dur="1.4s" repeatCount="indefinite" />
       </line>
-      <line id="bottom-tail" x1="106.25" y1="201.23" x2="84.05" y2="201.23">
+      <line id="bottomTail" x1="106.25" y1="201.23" x2="84.05" y2="201.23">
         <animateTransform id="bottomTailScale" attributeName="transform" type="translate" values="1 0; 10 0; 1 0"
           keyTimes="0; 0.5; 1" dur="1.4s" repeatCount="indefinite" begin="topTailScale.begin + 0.2s" />
       </line>
-      <line id="long-tail" x1="106.25" y1="190.98" x2="68.77" y2="190.98">
+      <line id="longTail" x1="106.25" y1="190.98" x2="68.77" y2="190.98">
         <animateTransform id="longTailScale" attributeName="transform" type="translate" values="1 0; 10 0; 1 0"
           keyTimes="0; 0.5; 1" dur="1.4s" repeatCount="indefinite" begin="bottomTailScale.begin + 0.2s" />
       </line>
@@ -149,7 +147,7 @@
 
   <path id="window"
     d="M220.52,120.53 L203.39,120.53 C193.708843,120.486 185.880901,112.631251 185.87,102.95 L185.87,65.1 C185.880901,55.4187489 193.708843,47.5639996 203.39,47.52 L220.52,47.52 C230.197249,47.5694805 238.019129,55.4226305 238.03,65.1 L238.03,102.93 C238.024658,112.612915 230.20276,120.475016 220.52,120.53 Z"
-    stroke="#FFFFFF" stroke-width="13" transform="translate(168.5, 224.3) scale(0.162, 0.132)" opacity="0">
+    fill="none" stroke="#FFFFFF" stroke-width="13" transform="translate(168.5, 224.3) scale(0.162, 0.132)" opacity="0">
     <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.001s" fill="freeze"
       begin="enlargeWindowOpacity.begin" />
 
@@ -172,13 +170,13 @@
       begin="mountainFlating.end" />
   </g>
 
-  <g id="award-to" opacity="0">
+  <g id="awardTo" opacity="0">
     <g id="porthole" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
       <defs>
-        <path id="porthole-path"
+        <path id="portholePath"
           d="M275,225.43H257.87a17.6,17.6,0,0,1-17.52-17.58V170a17.6,17.6,0,0,1,17.52-17.58H275A17.6,17.6,0,0,1,292.51,170v37.83A17.61,17.61,0,0,1,275,225.43Z" />
         <clipPath id="portholeClip">
-          <use xlink:href="#porthole-path" />
+          <use xlink:href="#portholePath" />
         </clipPath>
       </defs>
       <g clip-path="url(#portholeClip)">
