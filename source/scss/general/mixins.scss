@@ -58,3 +58,19 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+@mixin sequence-delay($delay-rule, $start-loop-number: 1, $end-loop-number, $time-step,  $time-shift: 0) {
+  @for $i from ($start-loop-number) through ($end-loop-number) {
+    &:nth-child(#{$i + 1}) {
+      #{$delay-rule}-delay: (#{$time-shift + $i * $time-step});
+    }
+  }
+}
+
+@mixin sequence-delay-with-selector($selector, $delay-rule, $start-loop-number: 1, $end-loop-number, $time-step) {
+  @for $i from ($start-loop-number) through ($end-loop-number) {
+    #{$selector}:nth-child(#{$i}) & {
+      #{$delay-rule}-delay: (#{$i * $time-step});
+    }
+  }
+}

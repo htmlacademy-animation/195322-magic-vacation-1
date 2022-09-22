@@ -10,6 +10,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import AccentTypographyBuild from './modules/accent-typography-build';
+import svgAnimation from './modules/svg-animation';
 
 // init modules
 document();
@@ -21,6 +22,7 @@ chat();
 result();
 form();
 social();
+svgAnimation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
