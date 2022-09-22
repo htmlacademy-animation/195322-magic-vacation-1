@@ -4,9 +4,11 @@
   "description": "Личный проект «Таинственный отпуск» от HTML Academy",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
+    "commitizen": "^4.2.5",
     "copy-webpack-plugin": "5.1.1",
     "css-loader": "3.5.1",
     "csso-webpack-plugin": "2.0.0-beta.1",
+    "cz-conventional-changelog": "^3.3.0",
     "eslint": "6.5.1",
     "eslint-config-htmlacademy": "0.5.2",
     "gulp": "4.0.x",
@@ -40,7 +42,8 @@
     "build": "webpack",
     "webp": "gulp webp",
     "sprite": "gulp sprite",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open",
+    "commit": "cz"
   },
   "browserslist": [
     "last 2 versions",
@@ -55,8 +58,14 @@
     "source/sass/**/*.{sass,scss}"
   ],
   "dependencies": {
+    "cz-emoji-conventional": "^1.0.1",
     "normalize.css": "8.0.1",
     "swiper": "5.3.8",
     "three": "0.115.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-emoji-conventional"
+    }
   }
 }
