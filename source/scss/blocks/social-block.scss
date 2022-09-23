@@ -205,6 +205,8 @@ $social-block--links-count: 3;
 
   @media (min-width: $stop-scaling) {
     margin-top: 15px;
+    right: 50%;
+    transform: translateX(50%);
   }
 
   @media (max-width: $tablet) and (orientation: portrait) {
@@ -373,8 +375,8 @@ $social-block--links-count: 3;
       height: 1.7rem;
 
       @media (min-width: $stop-scaling) {
-        width: 8px;
-        height: 17px;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -385,8 +387,8 @@ $social-block--links-count: 3;
       height: 1.5rem;
 
       @media (min-width: $stop-scaling) {
-        width: 15px;
-        height: 15px;
+        width: 20px;
+        height: 20px;
       }
     }
   }
@@ -397,8 +399,8 @@ $social-block--links-count: 3;
       height: 1rem;
 
       @media (min-width: $stop-scaling) {
-        width: 10px;
-        height: 10px;
+        width: 20px;
+        height: 20px;
       }
     }
   }

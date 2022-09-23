@@ -4,6 +4,7 @@ export default class FullPageScroll {
   constructor() {
     this.HIDDEN_SCREEN_CLASS_NAME = `screen--hidden`;
     this.ACTIVE_SCREEN_CLASS_NAME = `active`;
+    this.VISITED_SCREEN_CLASS_NAME = `visited`;
     this.THROTTLE_TIMEOUT = 1000;
     this.scrollFlag = true;
     this.timeout = null;
@@ -87,6 +88,7 @@ export default class FullPageScroll {
     this.screenElements[this.activeScreen].classList.remove(this.HIDDEN_SCREEN_CLASS_NAME);
     setTimeout(() => {
       this.screenElements[this.activeScreen].classList.add(this.ACTIVE_SCREEN_CLASS_NAME);
+      this.screenElements[this.activeScreen].classList.add(this.VISITED_SCREEN_CLASS_NAME);
     }, 100);
   }
 
