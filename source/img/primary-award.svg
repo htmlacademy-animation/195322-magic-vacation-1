@@ -1,5 +1,5 @@
 <svg width="350" height="330" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-  viewBox="0 0 350 330">
+  viewBox="0 0 350 330" opacity="0">
   <animate id="primaryAwardAppear" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze"
     begin="indefinite" restart="whenNotActive" />
 
@@ -16,12 +16,13 @@
         </path>
         <path
           d="M185.64,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.45,3.45,0,0,0,185.64,231.88Z" />
+
         <animateTransform attributeName="transform" type="scale" values="1, 0.99; 1, 1; 1, 0.99; 1, 1; 1, 0.99"
           keyTimes="0; 0.3; 0.5; 0.7; 1" dur="2.2s" additive="sum" repeatCount="indefinite"
-          begin="primaryAwardAppear.end - 1s" />
+          begin="primaryAwardAppear.begin" />
         <animateTransform attributeName="transform" type="skewX" values="-0.3; 0; 0.15; 0; -0.3"
           keyTimes="0; 0.3; 0.5; 0.7; 1" dur="2.2s" additive="sum" repeatCount="indefinite"
-          begin="primaryAwardAppear.end - 1s" />
+          begin="primaryAwardAppear.begin" />
       </g>
 
       <g id="topFins2">
@@ -31,6 +32,7 @@
         <path
           d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2A9,9,0,0,1,123.23,173.34Z"
           fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+
         <animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="2s"
           repeatCount="indefinite" />
       </g>
@@ -41,6 +43,7 @@
         <path
           d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z"
           fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+
         <animateTransform attributeName="transform" type="translate" values="0 3.5; 0 0; 0 3.5" dur="2s"
           repeatCount="indefinite" />
       </g>
@@ -63,10 +66,10 @@
           fill="#25b774">
           <animate attributeName="d"
             values="
-                M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
-                M 132.18 186.12 C 148.92 181.85 176.76 176.12 204.99 176.12 C 249.52 176.12 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249.15 205.18 205 205.18 C 176.77 205.18 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
-                M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17"
-            begin="primaryAwardAppear.end" dur="2s" repeatCount="indefinite" />
+                              M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
+                              M 132.18 186.12 C 148.92 181.85 176.76 176.12 204.99 176.12 C 249.52 176.12 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249.15 205.18 205 205.18 C 176.77 205.18 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
+                              M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17"
+            begin="primaryAwardAppear.begin" dur="2s" repeatCount="indefinite" />
         </path>
       </g>
 
@@ -94,7 +97,7 @@
     </g>
 
     <g id="clouds" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
-      <g id="cloud1">
+      <g id="cloud1" opacity="0">
         <line x1="68.95" y1="107.8" x2="131.86" y2="107.8" />
         <path d="M41.77,97.54H77.06a12.4,12.4,0,1,1,24.8,0h17.93" />
       </g>
@@ -143,6 +146,8 @@
           from="M289.94,327.88H244.88L212.8,296.58a1.89,1.89,0,0,0-2.44,0l-10.2,10.23a1.72,1.72,0,0,1-2.25,0l-19-20.17a2.4,2.4,0,0,0-3.1,0l-26.42,25.64a1.71,1.71,0,0,1-2.25,0l-2.63-2.92a1.71,1.71,0,0,0-2.31,0L124.63,329H80.78"
           to="M 291 329 H 244.88 L 215 329 a 1.89 1.89 0 0 0 -2.44 0 l -10.56 0 a 1.72 1.72 0 0 1 -2.25 0 l -19.75 0 a 2.4 2.4 0 0 0 -3.1 0 l -23.9 0 a 1.71 1.71 0 0 1 -2 0 l -2 0 a 1.71 1.71 0 0 0 -2.31 0 L 124.63 329 H 80.78"
           dur="1s" fill="freeze" repeatCount="1" begin="primaryAwardAppear.end + 1.5s" />
+        <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.1s" fill="freeze"
+          begin="mountainFlating.end - 0.04s" />
       </path>
     </g>
 
@@ -165,7 +170,6 @@
     <animate id="to" attributeType="CSS" attributeName="stroke-width" from="13" to="2" dur="0.2s" fill="freeze"
       begin="enlargeWindowOpacity.end + 0.25s" />
   </path>
-
 
   <g id="floor" opacity="0">
     <line x1="72.03" y1="329" x2="295.52" y2="329" fill="none" stroke="#fff" stroke-linecap="round"
