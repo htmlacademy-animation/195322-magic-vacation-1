@@ -1,7 +1,7 @@
 <svg width="350" height="330" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
   viewBox="0 0 350 330" opacity="0">
-  <animate id="primaryAwardAppear" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze"
-    begin="indefinite" restart="whenNotActive" />
+  <animate id="primaryAwardAppear" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.4s"
+    begin="indefinite" restart="whenNotActive" fill="freeze" />
 
   <g id="awardFrom">
     <g id="dirigable">
@@ -12,16 +12,16 @@
         <path id="rightPorthole"
           d="M204.25,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.44,3.44,0,0,0,204.25,231.88Z">
           <animate id="enlargeWindowOpacity" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.001s"
-            fill="freeze" begin="primaryAwardAppear.end + 2.2s" />
+            fill="freeze" begin="primaryAwardAppear.end + 1.8s" />
         </path>
         <path
           d="M185.64,231.88h-2.05a3.45,3.45,0,0,0-3.43,3.45v2.92a3.45,3.45,0,0,0,3.43,3.45h2.05a3.45,3.45,0,0,0,3.43-3.45v-2.92A3.45,3.45,0,0,0,185.64,231.88Z" />
 
         <animateTransform attributeName="transform" type="scale" values="1, 0.99; 1, 1; 1, 0.99; 1, 1; 1, 0.99"
-          keyTimes="0; 0.3; 0.5; 0.7; 1" dur="2.2s" additive="sum" repeatCount="indefinite"
+          keyTimes="0; 0.3; 0.5; 0.7; 1" dur="1.5s" additive="sum" repeatCount="indefinite"
           begin="primaryAwardAppear.begin" />
         <animateTransform attributeName="transform" type="skewX" values="-0.3; 0; 0.15; 0; -0.3"
-          keyTimes="0; 0.3; 0.5; 0.7; 1" dur="2.2s" additive="sum" repeatCount="indefinite"
+          keyTimes="0; 0.3; 0.5; 0.7; 1" dur="1.5s" additive="sum" repeatCount="indefinite"
           begin="primaryAwardAppear.begin" />
       </g>
 
@@ -33,7 +33,7 @@
           d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2A9,9,0,0,1,123.23,173.34Z"
           fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
 
-        <animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="2s"
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="1.5s"
           repeatCount="indefinite" />
       </g>
       <g id="bottomFins2">
@@ -44,7 +44,7 @@
           d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z"
           fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
 
-        <animateTransform attributeName="transform" type="translate" values="0 3.5; 0 0; 0 3.5" dur="2s"
+        <animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="1.5s"
           repeatCount="indefinite" />
       </g>
 
@@ -66,10 +66,10 @@
           fill="#25b774">
           <animate attributeName="d"
             values="
-                              M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
-                              M 132.18 186.12 C 148.92 181.85 176.76 176.12 204.99 176.12 C 249.52 176.12 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249.15 205.18 205 205.18 C 176.77 205.18 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
-                              M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17"
-            begin="primaryAwardAppear.begin" dur="2s" repeatCount="indefinite" />
+              M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
+              M 132.18 186.12 C 148.92 181.85 176.76 176.12 204.99 176.12 C 249.52 176.12 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249.15 205.18 205 205.18 C 176.77 205.18 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17;
+              M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17"
+            dur="1.5s" repeatCount="indefinite" />
         </path>
       </g>
 
@@ -80,7 +80,7 @@
         <path
           d="M123.23,173.34h9.16a3.29,3.29,0,0,1,3.29,3.3v5.71a3.29,3.29,0,0,1-3.29,3.3H115.57a1.32,1.32,0,0,1-1.32-1.32v-2A9,9,0,0,1,123.23,173.34Z"
           fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-        <animateTransform attributeName="transform" type="translate" values="0 3.5; 0 0; 0 3.5" dur="2s"
+        <animateTransform attributeName="transform" type="translate" values="0 3.5; 0 0; 0 3.5" dur="1.5s"
           repeatCount="indefinite" />
       </g>
 
@@ -91,7 +91,7 @@
         <path
           d="M123.23,207.39h9.16a3.29,3.29,0,0,0,3.29-3.3v-5.71a3.29,3.29,0,0,0-3.29-3.3H115.57a1.32,1.32,0,0,0-1.32,1.32v2A9,9,0,0,0,123.23,207.39Z"
           fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-        <animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="2s"
+        <animateTransform attributeName="transform" type="translate" values="0 3.5; 0 0; 0 3.5" dur="1.5s"
           repeatCount="indefinite" />
       </g>
     </g>
@@ -109,13 +109,13 @@
       </g>
 
       <animateTransform id="cloud1Translate" attributeName="transform" type="translate" from="170 0" to="-50 0"
-        dur="1.5s" fill="freeze" begin="primaryAwardAppear.end" xlink:href="#cloud1" />
+        dur="1.3s" fill="freeze" begin="primaryAwardAppear.end" xlink:href="#cloud1" />
       <animate id="cloud1Opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0"
-        keyTimes="0; 0.15; 0.85; 1" dur="1.5s" fill="freeze" begin="primaryAwardAppear.end" xlink:href="#cloud1" />
+        keyTimes="0; 0.15; 0.85; 1" dur="1.3s" fill="freeze" begin="primaryAwardAppear.end" xlink:href="#cloud1" />
       <animateTransform id="cloud2Translate" attributeName="transform" type="translate" from="200 0" to="-200 0"
-        dur="2.2s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2" />
+        dur="1.7s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2" />
       <animate id="cloud2Opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0"
-        keyTimes="0; 0.35; 0.9; 1" dur="2.2s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2" />
+        keyTimes="0; 0.35; 0.9; 1" dur="1.7s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2" />
     </g>
 
     <defs>
@@ -145,14 +145,14 @@
         <animate id="mountainFlating" attributeName="d"
           from="M289.94,327.88H244.88L212.8,296.58a1.89,1.89,0,0,0-2.44,0l-10.2,10.23a1.72,1.72,0,0,1-2.25,0l-19-20.17a2.4,2.4,0,0,0-3.1,0l-26.42,25.64a1.71,1.71,0,0,1-2.25,0l-2.63-2.92a1.71,1.71,0,0,0-2.31,0L124.63,329H80.78"
           to="M 291 329 H 244.88 L 215 329 a 1.89 1.89 0 0 0 -2.44 0 l -10.56 0 a 1.72 1.72 0 0 1 -2.25 0 l -19.75 0 a 2.4 2.4 0 0 0 -3.1 0 l -23.9 0 a 1.71 1.71 0 0 1 -2 0 l -2 0 a 1.71 1.71 0 0 0 -2.31 0 L 124.63 329 H 80.78"
-          dur="1s" fill="freeze" repeatCount="1" begin="primaryAwardAppear.end + 1.5s" />
+          dur="0.4s" fill="freeze" repeatCount="1" begin="primaryAwardAppear.end + 2s" />
         <animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.1s" fill="freeze"
           begin="mountainFlating.end - 0.04s" />
       </path>
     </g>
 
     <animate id="opacityOut" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.5s" fill="freeze"
-      begin="primaryAwardAppear.end + 2.5s" />
+      begin="primaryAwardAppear.end + 2.3s" />
   </g>
 
   <path id="window"
@@ -175,7 +175,7 @@
     <line x1="72.03" y1="329" x2="295.52" y2="329" fill="none" stroke="#fff" stroke-linecap="round"
       stroke-miterlimit="10" stroke-width="2" />
 
-    <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze"
+    <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze"
       begin="mountainFlating.end" />
   </g>
 
@@ -198,17 +198,21 @@
 
           <animate id="opacityInClouds" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.2s"
             fill="freeze" begin="opacityIn.end - 0.6s" />
-          <animateTransform attributeName="transform" type="translate" values="235, 0; -250, 0" dur="4.5s"
-            additive="sum" begin="opacityInClouds.begin + 0.1s" repeatCount="indefinite" />
+          <animateTransform attributeName="transform" type="translate" values="235, 0; -250, 0" dur="3s" additive="sum"
+            begin="opacityInClouds.begin + 0.1s" repeatCount="indefinite" />
         </g>
       </g>
     </g>
 
-    <g id="ski" fill="#fff">
+    <g id="ski" fill="#fff" opacity="0">
       <path
         d="M91.14,327.79a2.2,2.2,0,0,1-2-2.36l13.66-193.17c1.1-15.49-4.8-21.92-8.75-24.47a1.35,1.35,0,0,1,.53-2.45C103,104,122.18,104,120,134.19L106.43,326.67a2.2,2.2,0,0,1-2.35,2Z" />
       <path
         d="M124.5,328.17a2.2,2.2,0,0,1-2.17-2.23l2.24-193.63c0.19-15.53-6.07-21.61-10.16-23.91a1.35,1.35,0,0,1,.39-2.47c8.36-1.9,27.49-3,27.15,27.28l-2.25,192.93a2.2,2.2,0,0,1-2.22,2.18Z" />
+      <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.25s" fill="freeze"
+        begin="opacityIn.end - 0.175s" />
+      <animateTransform id="toTranslate" attributeName="transform" type="translate" from="-80 0" to="0 0" dur="0.3s"
+        fill="freeze" begin="opacityIn.end - 0.175s" additive="sum" />
     </g>
 
     <g id="chair" stroke-miterlimit="10" stroke-width="2">
@@ -240,7 +244,7 @@
       <line x1="151.57" y1="195.44" x2="209.05" y2="195.44" fill="none" stroke="#fff" stroke-linecap="round" />
     </g>
 
-    <g id="leaf">
+    <g id="leaf" transform="translate(5 5)" opacity="0">
       <path
         d="M79.18,194A131,131,0,0,1,94.77,220.9a255,255,0,0,1-20.08-23.55,259,259,0,0,1-17.07-25.88A131.72,131.72,0,0,1,79.18,194"
         fill="#36e69a" />
@@ -277,15 +281,18 @@
       <path d="M92.62,217.67A529.26,529.26,0,0,1,149.48,328" fill="none" stroke="#36e69a" stroke-linecap="round"
         stroke-linejoin="round" stroke-width="2" />
 
-      <animateTransform id="leafRotate" attributeName="transform" type="rotate"
-        values="-1.5 190 250; 1.5 190 250; -1.5 190 250;" keyTimes="0; 0.5; 1" dur="1.75s" repeatCount="indefinite"
-        additive="sum" begin="opacityIn.end" />
+      <animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze"
+        begin="opacityIn.end - 0.25s" />
+      <animateTransform attributeName="transform" type="rotate" values="0 204 235; 5 204 235; 0 204 235;"
+        keyTimes="0; 0.5; 1" dur="2s" additive="sum" begin="opacityIn.end" repeatCount="indefinite" />
+      <animateTransform attributeName="transform" type="translate" values="-8 -5; 0 0; -8 -5;" keyTimes="0; 0.5; 1"
+        dur="2s" additive="sum" begin="opacityIn.end" repeatCount="indefinite" />
     </g>
 
-    <animate id="opacityIn" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.5s" fill="freeze"
+    <animate id="opacityIn" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.25s" fill="freeze"
       begin="opacityOut.end" />
 
-    <animateTransform id="translateIn" attributeName="transform" type="translate" from="-170 0" to="0 0" dur="0.5s"
+    <animateTransform id="translateIn" attributeName="transform" type="translate" from="-170 0" to="0 0" dur="0.3s"
       fill="freeze" begin="opacityOut.end" additive="sum" />
   </g>
 </svg>
