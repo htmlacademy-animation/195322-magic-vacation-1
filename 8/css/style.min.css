@@ -2545,15 +2545,14 @@ img {
   }
 }
 .prizes__item--journeys .prizes__icon {
-  position: relative;
-  left: -5.9rem;
-  bottom: -1.4rem;
+  left: -8.8rem;
+  bottom: -0.5rem;
   width: 26.8rem;
 }
 @media (min-width: 2000px) {
   .prizes__item--journeys .prizes__icon {
-    left: -59px;
-    bottom: -14px;
+    left: -88px;
+    bottom: -5px;
     width: 268px;
   }
 }
@@ -2566,7 +2565,7 @@ img {
 }
 @media (max-width: 1024px) and (orientation: landscape) {
   .prizes__item--journeys .prizes__icon {
-    left: -2rem;
+    left: -3.8rem;
     width: 13rem;
   }
 }
@@ -2590,21 +2589,29 @@ img {
   }
 }
 .prizes__item--cases .prizes__icon {
+  left: -14.8rem;
+  bottom: -0.4rem;
   width: 18.8rem;
 }
 @media (min-width: 2000px) {
   .prizes__item--cases .prizes__icon {
+    left: -148px;
+    bottom: -4px;
     width: 188px;
   }
 }
 @media (max-width: 1024px) and (orientation: portrait) {
   .prizes__item--cases .prizes__icon {
+    left: 0;
+    bottom: 0;
     margin-right: 1.3rem;
     width: 10.211rem;
   }
 }
 @media (max-width: 1024px) and (orientation: landscape) {
   .prizes__item--cases .prizes__icon {
+    left: -7rem;
+    bottom: -0.7rem;
     width: 9.5rem;
   }
 }
@@ -2641,7 +2648,13 @@ img {
     width: 10rem;
   }
 }
+.prizes__item--codes .prizes__icon img {
+  display: block;
+}
 
+.prizes__icon {
+  position: relative;
+}
 .screen--prizes:not(.visited) .prizes__icon {
   display: none;
 }
@@ -2650,10 +2663,40 @@ img {
     margin-right: 3.8rem;
   }
 }
+.prizes__icon svg {
+  width: 35rem;
+  height: 33rem;
+}
+@media (max-width: 1024px) and (orientation: landscape) {
+  .prizes__icon svg {
+    width: 17.2rem;
+    height: auto;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .prizes__icon svg {
+    display: none;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .prizes__icon svg {
+    display: none;
+  }
+}
 .prizes__icon img {
-  display: block;
+  display: none;
   width: 100%;
   height: auto;
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .prizes__icon img {
+    display: block;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .prizes__icon img {
+    display: block;
+  }
 }
 
 .prizes__desc {
