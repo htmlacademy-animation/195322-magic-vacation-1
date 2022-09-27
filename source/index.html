@@ -171,15 +171,20 @@
           <ul class="prizes__list">
             <li class="prizes__item prizes__item--journeys" id="prizes-journeys">
               <div class="prizes__icon">
-                <img inline id="primary-award-illustration" src="source/img/primary-award.svg" />
+                <img inline src="source/img/primary-award.svg" />
+                <picture>
+                  <source srcset="img/prize1-mob.svg" media="(orientation: portrait)">
+                  <img src="img/prize1.svg" alt="">
+                </picture>
               </div>
               <p class="prizes__desc">
                 <b>3</b>
                 <span>загадочных путешествия</span>
               </p>
             </li>
-            <li class="prizes__item prizes__item--cases">
+            <li class="prizes__item prizes__item--cases" id="prizes-cases">
               <div class="prizes__icon">
+                <img inline src="source/img/secondary-award.svg" />
                 <picture>
                   <source srcset="img/prize2-mob.svg" media="(orientation: portrait)">
                   <img src="img/prize2.svg" alt="">

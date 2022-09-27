@@ -3,7 +3,7 @@
   <animate id="primaryAwardAppear" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.4s"
     begin="indefinite" restart="whenNotActive" fill="freeze" />
 
-  <g id="awardFrom">
+  <g id="primaryAwardFrom">
     <g id="dirigable">
       <g id="dirigableBottom" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
         <path
@@ -179,7 +179,7 @@
       begin="mountainFlating.end" />
   </g>
 
-  <g id="awardTo" opacity="0">
+  <g id="primaryAwardTo" opacity="0">
     <g id="porthole" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2">
       <defs>
         <path id="portholePath"
