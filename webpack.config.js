@@ -3,6 +3,7 @@ const CssoWebpackPlugin = require('csso-webpack-plugin').default;
 const CopyPlugin = require('copy-webpack-plugin');
 const WriteFilePlugin = require('write-file-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackInlineSVGPlugin = require('html-webpack-inline-svg-plugin');
 const path = require('path');
 
 module.exports = {
@@ -90,6 +91,32 @@ module.exports = {
     new HtmlWebpackPlugin({
       filename: 'index.html',
       template: 'source/index.html',
+    }),
+    new HtmlWebpackInlineSVGPlugin({
+      runPreEmit: true,
+      svgoConfig: [
+        {
+          removeViewBox: false,
+        },
+        {
+          removeUselessDefs: false,
+        },
+        {
+          cleanupNumericValues: false,
+        },
+        {
+          mergePaths: false,
+        },
+        {
+          removeHiddenElems: false,
+        },
+        {
+          removeNonInheritableGroupAttrs: false,
+        },
+        {
+          cleanupIDs: false
+        },
+      ]
     }),
     new MiniCssExtractPlugin({
       filename: 'css/style.min.css',
