@@ -6,6 +6,10 @@ const targets = [
   {
     animateTarget: `secondaryAwardAppear`,
     parent: `prizes-cases`
+  },
+  {
+    animateTarget: `additionalAwardAppear`,
+    parent: `prizes-codes`
   }
 ];
 
