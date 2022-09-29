@@ -6,6 +6,10 @@ const targets = [
   {
     animateTarget: `secondaryAwardAppear`,
     parent: `prizes-cases`
+  },
+  {
+    animateTarget: `additionalAwardAppear`,
+    parent: `prizes-codes`
   }
 ];
 
@@ -36,7 +40,13 @@ class SvgAnimation {
 
   init() {
     const node = document.getElementById(this._parent);
+
     node.addEventListener(`transitionstart`, this.beginAnimation);
+    if (this._parent === `prizes-journeys`) {
+      setTimeout(() => {
+        node.classList.add(`visible`);
+      }, 2450);
+    }
   }
 }
 
