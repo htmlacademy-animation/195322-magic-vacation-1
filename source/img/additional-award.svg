@@ -83,7 +83,7 @@
     </g>
 
     <g id="balloon">
-      <line id="balloonString" transform-origin="107 289" x1="107.65" y1="166.71" x2="107.65" y2="289.02" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" opacity="0">
+      <line id="balloonString" style="transform-origin: bottom" x1="107.65" y1="166.71" x2="107.65" y2="289.02" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" opacity="0" transform="translate(0, 5)">
         <set
           attributeName="opacity"
           to="1"
@@ -94,7 +94,7 @@
           attributeName="transform"
           type="scale"
           from="1, 0"
-          to="1, 1.1"
+          to="1, 1.2"
           keySplines="0.42, 0.0, 0.58, 1.0"
           dur="0.4s"
           additive="sum"
@@ -149,7 +149,7 @@
         <animateTransform
           attributeName="transform"
           type="translate"
-          values="0 0; 10 10; -5 0; 0 5; 0 0;"
+          values="0 0; 10 10; -5 0; 0 5; 0 10;"
           keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0"
           keyTimes="0; 0.25; 0.5; 0.75; 1"
           dur="1s"
