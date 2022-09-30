@@ -10786,16 +10786,16 @@ const SCALE_OPTIONS = {
 };
 
 const TRANSLATE_OPTIONS_BASE = {
-  delay: 0.1,
-  offset: 150,
+  delay: 0.075,
+  offset: 100,
 };
 
 const TRANSLATE_OPTIONS = {
   attributeName: `transform`,
   type: `translate`,
-  values: `0 0; 0 ${TRANSLATE_OPTIONS_BASE.offset}; 0 ${TRANSLATE_OPTIONS_BASE.offset + 20}; 0 ${TRANSLATE_OPTIONS_BASE.offset}`,
+  values: `0 0; 0 ${TRANSLATE_OPTIONS_BASE.offset}; 0 ${TRANSLATE_OPTIONS_BASE.offset + 25}; 0 ${TRANSLATE_OPTIONS_BASE.offset}`,
   keyTimes: `0; 0.8; 0.85; 1`,
-  dur: `0.7s`,
+  dur: `0.4s`,
   fill: `freeze`,
   additive: `sum`,
 };
@@ -10906,7 +10906,7 @@ const createFailAnimation = (element) => {
     const translationId = index === 0 ? firstAnimationId : `${id}_${index + 1}_translate`;
     const staggeredDelay = TRANSLATE_OPTIONS_BASE.delay / 2 + TRANSLATE_OPTIONS_BASE.delay * 1 / (1 / index + 1);
     const translationBegin = index === 0 ? `indefinite` : `${id}_${index}_translate.begin + ${staggeredDelay}s`;
-    const opacityBegin = index === 0 ? `${firstAnimationId}.begin` : `${id}_${index}_translate.begin + ${staggeredDelay}s`;
+    const opacityBegin = index === 0 ? `${firstAnimationId}.begin + 0.05s` : `${id}_${index}_translate.begin + ${staggeredDelay + 0.05}s`;
     const strokeBegin = opacityBegin;
 
     part.setAttribute(`opacity`, `0`);
@@ -10935,7 +10935,7 @@ const createFailAnimation = (element) => {
           begin: strokeBegin,
           length: part.getTotalLength(),
           points: 2,
-          dur: `0.4s`,
+          dur: `0.25s`,
         })
     );
   });
