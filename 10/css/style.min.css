@@ -3191,7 +3191,7 @@ img {
   stroke-dashoffset: var(--dashoffset-length);
 }
 .screen--result.screen--show .result__button svg.result__button-restart-icon {
-  animation: dash-in 0.6s linear 1.2s forwards;
+  animation: dash-in 0.4s linear 1.2s forwards;
 }
 @media (min-width: 2000px) {
   .result__button svg {

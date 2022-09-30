@@ -10850,9 +10850,11 @@ const createOpacitySet = ({id, to, begin}) => setAnimationAttributes({
 });
 
 const clearAnimationTags = (animationContainer) => {
-  while (animationContainer.hasChildNodes()) {
-    animationContainer.removeChild(animationContainer.firstChild);
-  }
+  animationContainer.childNodes.forEach((child) => {
+    if (child.tagName === `set` || child.tagName === `animate` || child.tagName === `animateTransform`) {
+      animationContainer.removeChild(child);
+    }
+  });
 };
 
 const createVictoryAnimation = (element) => {
