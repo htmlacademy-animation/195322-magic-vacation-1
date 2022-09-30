@@ -309,6 +309,17 @@
     width: 2.4rem;
     height: 1.9rem;
 
+    &.result__button-restart-icon {
+      --dashoffset-length: 50;
+
+      stroke-dasharray: 50;
+      stroke-dashoffset: var(--dashoffset-length);
+
+      .screen--result.screen--show & {
+        animation: dash-in 0.6s linear 1.2s forwards;
+      }
+    }
+
     @media (min-width: $stop-scaling) {
       margin-left: 3px;
       width: 24px;
