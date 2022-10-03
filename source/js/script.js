@@ -11,6 +11,7 @@ import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import AccentTypographyBuild from './modules/accent-typography-build';
 import svgAnimation from './modules/svg-animation';
+import resultTitleAnimation from './modules/result-title-animation';
 
 // init modules
 document();
@@ -23,6 +24,7 @@ result();
 form();
 social();
 svgAnimation();
+resultTitleAnimation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
