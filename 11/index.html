@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mysterious Vacation</title>
+<link href="css/style.min.css" rel="stylesheet">  <base href="https://htmlacademy-animation.github.io/195322-magic-vacation-1/11/">
+</head>
+<body class="page-body">
+
+  <header class="page-header js-header">
+    <div class="page-header__wrapper">
+      <a href="#" class="page-header__logo" aria-label="Перейти на страницу FJORD.Inc">
+        <svg width="100" height="15" viewBox="0 0 100 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M.26 1.4V14h2.016V8.906h5.058V6.44H2.276V3.848h7.596V1.4H.26zm12.473 12.96c2.394 0 3.51-1.71 3.51-4.86V1.4h-1.98v7.56c0 2.25-.54 2.916-1.53 2.916-.9 0-1.26-.576-1.386-1.296l-1.98.36c.27 2.106 1.296 3.42 3.366 3.42zm5.659-6.66c0 3.672 3.996 6.66 8.928 6.66s8.928-2.988 8.928-6.66-3.996-6.66-8.928-6.66-8.928 2.988-8.928 6.66zm2.214 0c0-2.322 3.006-4.176 6.714-4.176 3.672 0 6.66 1.854 6.66 4.176 0 2.304-2.988 4.158-6.66 4.158-3.708 0-6.714-1.854-6.714-4.158zM40.403 14V8.906h.396l8.28 5.796V12.38l-5.04-3.474h.162c3.798 0 5.076-1.602 5.076-3.744 0-2.07-1.278-3.762-5.076-3.762h-5.814V14h2.016zm3.132-10.278c2.25 0 3.51.414 3.51 1.71 0 1.332-1.26 1.602-3.51 1.602h-3.132V3.722h3.132zm8.159-2.34V14h6.174c4.878 0 8.856-2.466 8.856-6.3 0-3.852-3.978-6.318-8.856-6.318h-6.174zm2.016 10.242V3.722h3.834c3.996 0 6.948 1.296 6.948 3.978 0 2.538-2.952 3.924-6.948 3.924H53.71zm19.473 2.394h1.8V5h-1.8v9.018zm-.27-12.042c0 .594.486 1.116 1.17 1.116a1.13 1.13 0 001.152-1.116c0-.594-.468-1.17-1.152-1.17-.702 0-1.17.576-1.17 1.17zM76.787 14h1.782V9.104c.18-1.098 1.026-2.142 2.52-2.142 1.026 0 2.178.486 2.178 2.592V14h1.782V9.014c0-2.862-1.818-4.284-3.69-4.284-1.44 0-2.286.828-2.79 2.124V5h-1.782v9zm14.203.27c2.52 0 4.392-1.764 4.734-3.942H94.05c-.324.972-1.35 1.692-3.06 1.692-2.142 0-3.222-1.098-3.222-2.43 0-1.35 1.08-2.628 3.222-2.628 1.764 0 2.808.882 3.096 1.962h1.656C95.436 6.71 93.618 4.73 90.99 4.73c-2.898 0-4.86 2.394-4.86 4.86 0 2.484 1.998 4.68 4.86 4.68zm6.08-1.332c0 .72.485 1.206 1.205 1.206.72 0 1.206-.486 1.206-1.206 0-.738-.486-1.224-1.206-1.224s-1.206.486-1.206 1.224z" fill="currentColor"/></svg>
+      </a>
+      <button class="page-header__toggler js-menu-toggler" type="button" aria-label="Управление мобильным меню"><span>Меню</span></button>
+      <nav class="page-header__nav">
+        <div class="page-header__menu js-menu" id="menu">
+          <ul>
+            <li>
+              <a class="js-menu-link active" href="#top" data-href="top">главная</a>
+            </li>
+            <li>
+              <a class="js-menu-link" href="#story" data-href="story">история</a>
+            </li>
+            <li>
+              <a class="js-menu-link" href="#prizes" data-href="prizes">призы</a>
+            </li>
+            <li>
+              <a class="js-menu-link" href="#rules" data-href="rules">правила</a>
+            </li>
+            <li>
+              <a class="js-menu-link" href="#game" data-href="game">игра</a>
+            </li>
+          </ul>
+        </div>
+        <div class="page-header__social">
+          <div class="social-block js-social-block">
+            <button class="social-block__toggler" aria-label="Управлять блоком с социальными кнопками">
+              <svg width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.672 7.437a3.541 3.541 0 10-3.54-3.541c0 .304.04.596.114.877L7.218 8.955A3.536 3.536 0 004.33 7.46a3.541 3.541 0 000 7.083 3.534 3.534 0 002.887-1.495l9.028 4.182a3.554 3.554 0 00-.115.877 3.541 3.541 0 103.541-3.54 3.534 3.534 0 00-2.887 1.494L7.757 11.88c.072-.281.115-.573.115-.877 0-.305-.042-.597-.115-.878l9.028-4.182a3.532 3.532 0 002.887 1.495z" fill="currentColor"/></svg>
+            </button>
+            <ul class="social-block__list">
+              <li>
+                <a class="social-block__link social-block__link--fb" href="#" aria-label="Мы на Facebook">
+                  <svg width="8" height="17" viewBox="0 0 8 17" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4.246 16.99H1.093l-.035-8.492H0v-3.19h1.058V3.81C1.058 1.421 2.577 0 5.218 0h2.2v3.186h-2.11c-1.025 0-1.06.3-1.06 1.063v1.058H7.43l-.263 3.191h-2.92v8.492z" fill="currentColor"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-block__link social-block__link--insta" href="#" aria-label="Мы в Instagram">
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.02 0H4.198A3.729 3.729 0 00.471 3.723v6.827a3.724 3.724 0 003.727 3.723h6.822a3.725 3.725 0 003.727-3.723V3.723A3.73 3.73 0 0011.02 0zm0 12.485H4.198a1.936 1.936 0 01-1.934-1.934V3.724a1.93 1.93 0 011.934-1.927h6.822c1.067 0 1.934.864 1.934 1.927v6.827a1.937 1.937 0 01-1.934 1.934z" fill="currentColor"/><path d="M7.609 3.11a4.034 4.034 0 00-4.027 4.03 4.034 4.034 0 004.027 4.025 4.03 4.03 0 004.027-4.025 4.032 4.032 0 00-4.027-4.03zm0 6.259a2.232 2.232 0 11.001-4.46 2.232 2.232 0 01-.001 4.46z" fill="currentColor"/><path d="M11.357 2.36a.969.969 0 00-.964.964c0 .531.433.97.964.97a.972.972 0 00.965-.97.97.97 0 00-.965-.964z" fill="currentColor"/></svg>
+                </a>
+              </li>
+              <li>
+                <a class="social-block__link social-block__link--vk" href="#" aria-label="Мы ВКонтакте">
+                  <svg width="17" height="10" viewBox="0 0 17 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.123 4.9s2.24-3.173 2.464-4.22c.073-.368-.092-.577-.48-.577h-1.939c-.444 0-.61.19-.744.477 0 0-1.052 2.246-2.327 3.667-.41.456-.619.596-.846.596-.186 0-.265-.152-.265-.565V.65c0-.501-.06-.648-.48-.648h-3.11c-.24 0-.388.133-.388.324 0 .476.726.583.726 1.877v2.671c0 .532-.028.743-.281.743-.673 0-2.258-2.31-3.147-4.937C3.13.145 2.937 0 2.435 0H.486C.206 0 0 .19 0 .477 0 .99.607 3.408 2.993 6.644 4.599 8.82 6.706 10 8.603 10c1.159 0 1.439-.197 1.439-.686V7.64c0-.413.165-.59.4-.59.266 0 .743.083 1.838 1.174C13.585 9.479 13.677 10 14.39 10h2.178c.224 0 .432-.107.432-.477 0-.494-.638-1.37-1.616-2.416-.404-.54-1.054-1.118-1.26-1.384-.296-.315-.209-.493 0-.823z" fill="currentColor"/></svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page-content">
+
+    <section class="animation-screen"></section>
+
+    <section class="screen screen--hidden screen--intro" id="top">
+      <div class="screen__wrapper">
+        <div class="intro">
+          <h1 class="intro__title">Таинственный отпуск</h1>
+          <div class="intro__content">
+            <div class="intro__info">
+              <p class="intro__label">Даты проведения конкурса:</p>
+              <p class="intro__date">01 — 31.05 / 2020</p>
+            </div>
+            <div class="intro__message">
+              <p>
+                Отгадай первым место назначения и&nbsp;отправься в&nbsp;путешествие в&nbsp;любое время или получи один из многочисленных призов
+                <svg width="16" height="16"  width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.353L3.903 4.99 0 3.647l1.346-2.323L4.443 4.01 3.673 0h2.673l-.77 4.01 3.078-2.686L10 3.647 6.134 4.99 10 6.353 8.654 8.657 5.577 5.989 6.347 10H3.673l.769-4.03-3.097 2.687L0 6.353z" fill="currentColor"/></svg>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="screen__footer js-footer">
+        <button class="screen__footer-enlarge js-footer-toggler" type="button" aria-label="Показать сообщение">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.353L3.903 4.99 0 3.647l1.346-2.323L4.443 4.01 3.673 0h2.673l-.77 4.01 3.078-2.686L10 3.647 6.134 4.99 10 6.353 8.654 8.657 5.577 5.989 6.347 10H3.673l.769-4.03-3.097 2.687L0 6.353z" fill="currentColor"/></svg>
+          
+        </button>
+        <button class="screen__footer-collapse js-footer-toggler" type="button" aria-label="Скрыть сообщение">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" d="M12.354.354L.738 11.969"/><path stroke="currentColor" d="M.738.54l11.615 11.615"/></svg>
+        </button>
+        <div class="screen__footer-wrapper">
+          <div class="screen__footer-announce">
+            <p class="screen__footer-label">Даты проведения конкурса:</p>
+            <p class="screen__footer-date">01 — 31.05 / 2020</p>
+          </div>
+          <div class="screen__footer-note">
+            <p>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.353L3.903 4.99 0 3.647l1.346-2.323L4.443 4.01 3.673 0h2.673l-.77 4.01 3.078-2.686L10 3.647 6.134 4.99 10 6.353 8.654 8.657 5.577 5.989 6.347 10H3.673l.769-4.03-3.097 2.687L0 6.353z" fill="currentColor"/></svg>
+              <span>Победители могут выбрать любые 14 дней подряд в&nbsp;течение двух лет с&nbsp;даты окончания конкурса. Победители могут воспользоваться путевкой сами или подарить другому лицу.</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--story" id="story">
+
+      <div class="slider swiper-container js-slider">
+
+        <div class="swiper-wrapper">
+
+          <div class="slider__item swiper-slide">
+            <h2 class="slider__item-title">История</h2>
+            <p class="slider__item-text">Джеймс Таргет был основателем компании &laquo;Fjord Inc.&raquo;. С&nbsp;1965 года &laquo;Fjord Inc.&raquo; прославилась надёжными и&nbsp;удобными чемоданами и&nbsp;аксессуарами для туристов.</p>
+          </div>
+
+          <div class="slider__item swiper-slide">
+            <p class="slider__item-text">Когда Джеймсу было 7&nbsp;лет, в&nbsp;их&nbsp;доме гостил дядюшка и&nbsp;развлекал детей рассказами о&nbsp;своей поездке в&nbsp;место, показавшееся малышу Таргету невероятным. Тогда Джеймс решил, что однажды посетит его, но&nbsp;не&nbsp;будет рассказывать о&nbsp;мечте, пока не&nbsp;осуществит.</p>
+          </div>
+
+          <div class="slider__item swiper-slide">
+            <p class="slider__item-text">Джеймс Таргет стал увлеченным путешественником. Он&nbsp;посетил 5&nbsp;континентов, 126&nbsp;стран.</p>
+          </div>
+
+          <div class="slider__item swiper-slide">
+            <p class="slider__item-text">Он&nbsp;сплавлялся по&nbsp;Амазонке и&nbsp;погружался в&nbsp;пещеры Франции, медитировал в&nbsp;горах Тибета и&nbsp;пожимал руку вождя племени Акугауа.</p>
+          </div>
+
+          <div class="slider__item swiper-slide">
+            <p class="slider__item-text">Из&nbsp;своих поездок Джеймс Таргет привозил идеи, как сделать свои чемоданы &laquo;Fjord Inc.&raquo; удобными и&nbsp;приспособленными к&nbsp;разным дорожным условиям.</p>
+          </div>
+
+          <div class="slider__item swiper-slide">
+            <p class="slider__item-text">Всё это время Джеймс не&nbsp;оставлял идею поездки своей мечты. Однако, как только он&nbsp;брался за&nbsp;планирование, возникали препятствия, не&nbsp;позволяющие отправиться туда.</p>
+          </div>
+
+          <div class="slider__item swiper-slide">
+            <p class="slider__item-text">В&nbsp;возрасте 67&nbsp;лет Джеймс Таргет попал под лавину и&nbsp;погиб. В&nbsp;своём завещании он&nbsp;поручил отправить в&nbsp;заветное путешествие трёх смельчаков, единых с&nbsp;ним духом.</p>
+          </div>
+
+          <div class="slider__item swiper-slide">
+            <p class="slider__item-text">Тех, кто сможет узнать таинственное место, задавая вопросы специально обученному ИИ&nbsp;&laquo;Соне&raquo;, ждет фантастическое путешествие.</p>
+          </div>
+        </div>
+        <div class="slider__controls">
+          <button class="slider__control slider__control--prev js-control-prev" type="button" aria-label="Показать предыдущую историю">
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11 1L1 11l10 10" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </button>
+          <button class="slider__control slider__control--next js-control-next" type="button" aria-label="Показать следующую историю">
+            <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1l10 10L1 21" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+          </button>
+        </div>
+        <div class="slider__pagination swiper-pagination"></div>
+      </div>
+
+      <div class="screen__bg"></div>
+    </section>
+
+    <section class="screen screen--hidden screen--prizes" id="prizes">
+      <div class="screen__wrapper">
+        <div class="prizes">
+          <h2 class="prizes__title">ПРизы</h2>
+          <div class="prizes__lead">
+            <p>Найди ответ и&nbsp;получи один из&nbsp;призов:</p>
+          </div>
+          <ul class="prizes__list">
+            <li class="prizes__item prizes__item--journeys" id="prizes-journeys">
+              <div class="prizes__icon">
+                <svg width="350" height="330" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 350 330" opacity="0"><animate id="primaryAwardAppear" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.4s" begin="indefinite" restart="whenNotActive" fill="freeze"/><g id="primaryAwardFrom"><g id="dirigable"><g id="dirigableBottom" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><path d="M175.44 249.28h48.36a13.27 13.27 0 0013-10.65l3.74-18.32h-68.18v25.89a3.09 3.09 0 003.08 3.08z"/><path d="M235.79 241.69h-9.22a8.31 8.31 0 01-8.28-8.31v-13.07"/><path id="rightPorthole" d="M204.25 231.88h-2.05a3.45 3.45 0 00-3.43 3.45v2.92a3.45 3.45 0 003.43 3.45h2.05a3.45 3.45 0 003.43-3.45v-2.92a3.44 3.44 0 00-3.43-3.45z"><animate id="enlargeWindowOpacity" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.001s" fill="freeze" begin="primaryAwardAppear.end + 1.8s"/></path><path d="M185.64 231.88h-2.05a3.45 3.45 0 00-3.43 3.45v2.92a3.45 3.45 0 003.43 3.45h2.05a3.45 3.45 0 003.43-3.45v-2.92a3.45 3.45 0 00-3.43-3.45z"/><animateTransform attributeName="transform" type="scale" values="1, 0.99; 1, 1; 1, 0.99; 1, 1; 1, 0.99" keyTimes="0; 0.3; 0.5; 0.7; 1" dur="1.5s" additive="sum" repeatCount="indefinite" begin="primaryAwardAppear.begin"/><animateTransform attributeName="transform" type="skewX" values="-0.3; 0; 0.15; 0; -0.3" keyTimes="0; 0.3; 0.5; 0.7; 1" dur="1.5s" additive="sum" repeatCount="indefinite" begin="primaryAwardAppear.begin"/></g><g id="topFins2"><path d="M123.23 173.34h9.16a3.29 3.29 0 013.29 3.3v5.71a3.29 3.29 0 01-3.29 3.3h-16.82a1.32 1.32 0 01-1.32-1.32v-2a9 9 0 019-9" fill="#068e4d"/><path d="M123.23 173.34h9.16a3.29 3.29 0 013.29 3.3v5.71a3.29 3.29 0 01-3.29 3.3h-16.82a1.32 1.32 0 01-1.32-1.32v-2a9 9 0 018.98-8.99z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="1.5s" repeatCount="indefinite"/></g><g id="bottomFins2"><path d="M123.23 207.39h9.16a3.29 3.29 0 003.29-3.3v-5.71a3.29 3.29 0 00-3.29-3.3h-16.82a1.32 1.32 0 00-1.32 1.32v2a9 9 0 009 9" fill="#068e4d"/><path d="M123.23 207.39h9.16a3.29 3.29 0 003.29-3.3v-5.71a3.29 3.29 0 00-3.29-3.3h-16.82a1.32 1.32 0 00-1.32 1.32v2a9 9 0 008.98 8.99z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><animateTransform attributeName="transform" type="translate" values="0 0; 0 3.5; 0 0" dur="1.5s" repeatCount="indefinite"/></g><g id="dirigableBody"><path d="M205 227.08c43.38 0 74.86-15.55 74.86-37s-31.48-37-74.86-37c-27.94 0-55.36 13.53-73.46 24.87a14.3 14.3 0 000 24.21c18.09 11.33 45.52 24.87 73.46 24.87" fill="#068e4d"/><path d="M205 227.08c43.38 0 74.86-15.55 74.86-37s-31.48-37-74.86-37c-27.94 0-55.36 13.53-73.46 24.87a14.3 14.3 0 000 24.21c18.09 11.38 45.52 24.92 73.46 24.92z" fill="none" stroke="#fff" stroke-width="2"/><path d="M205 176.09c-28.23 0-56.07 5.76-72.81 10-3.95 1-6 2.66-6.08 4.34a12.93 12.93 0 016.07-11.43c16.74-10.5 44.58-24.68 72.81-24.68 44.81 0 73.64 16 73.64 35.75v.37c-.37-7.95-29.1-14.37-73.63-14.37" fill="#36e69a"/><path d="M132.18 195.12c16.74 4.27 44.58 10 72.81 10 44.14 0 72.75-6.32 73.6-14.18-.86 19.34-29.45 34.86-73.6 34.86-28.23 0-56.07-14.19-72.81-24.68a12.88 12.88 0 01-6-10.18c.26 1.61 2.26 3.18 6 4.14" fill="#068e4d"/><path d="M132.18 186.12c16.74-4.27 44.58-10 72.81-10 44.53 0 73.26 6.43 73.61 14.38v.51c-.85 7.86-29.45 14.17-73.6 14.17-28.23 0-56.07-5.76-72.81-10-3.79-1-5.79-2.53-6-4.13v-.51c.13-1.69 2.15-3.36 6.1-4.37" fill="#25b774"><animate attributeName="d" values="M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17; M 132.18 186.12 C 148.92 181.85 176.76 176.12 204.99 176.12 C 249.52 176.12 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249.15 205.18 205 205.18 C 176.77 205.18 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17; M 132.18 186.12 C 148.92 181.85 166 171 205 172 C 249 171 278.25 182.55 278.6 190.5 L 278.6 191.01 C 277.75 198.87 249 201 205 201 C 173 200 148.93 199.42 132.19 195.18 C 128.4 194.18 126.4 192.65 126.19 191.05 L 126.19 190.54 C 126.32 188.85 128.34 187.18 132.29 186.17" dur="1.5s" repeatCount="indefinite"/></path></g><g id="topFins1"><path d="M123.23 173.34h9.16a3.29 3.29 0 013.29 3.3v5.71a3.29 3.29 0 01-3.29 3.3h-16.82a1.32 1.32 0 01-1.32-1.32v-2a9 9 0 019-9" fill="#068e4d"/><path d="M123.23 173.34h9.16a3.29 3.29 0 013.29 3.3v5.71a3.29 3.29 0 01-3.29 3.3h-16.82a1.32 1.32 0 01-1.32-1.32v-2a9 9 0 018.98-8.99z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><animateTransform attributeName="transform" type="translate" values="0 3.5; 0 0; 0 3.5" dur="1.5s" repeatCount="indefinite"/></g><g id="bottomFins1"><path d="M123.23 207.39h9.16a3.29 3.29 0 003.29-3.3v-5.71a3.29 3.29 0 00-3.29-3.3h-16.82a1.32 1.32 0 00-1.32 1.32v2a9 9 0 009 9" fill="#068e4d"/><path d="M123.23 207.39h9.16a3.29 3.29 0 003.29-3.3v-5.71a3.29 3.29 0 00-3.29-3.3h-16.82a1.32 1.32 0 00-1.32 1.32v2a9 9 0 008.98 8.99z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><animateTransform attributeName="transform" type="translate" values="0 3.5; 0 0; 0 3.5" dur="1.5s" repeatCount="indefinite"/></g></g><g id="clouds" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"><g id="cloud1" opacity="0"><path d="M68.95 107.8h62.91"/><path d="M41.77 97.54h35.29a12.4 12.4 0 1124.8 0h17.93"/></g><g id="cloud2" opacity="0"><path d="M258.96 93.19h39.78"/><path d="M278.75 82.91h-27.36a12.4 12.4 0 10-24.8 0h-17.94"/><path d="M287.01 82.91h22.2"/></g><animateTransform id="cloud1Translate" attributeName="transform" type="translate" from="170 0" to="-50 0" dur="1.3s" fill="freeze" begin="primaryAwardAppear.end" xlink:href="#cloud1"/><animate id="cloud1Opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.15; 0.85; 1" dur="1.3s" fill="freeze" begin="primaryAwardAppear.end" xlink:href="#cloud1"/><animateTransform id="cloud2Translate" attributeName="transform" type="translate" from="200 0" to="-200 0" dur="1.7s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2"/><animate id="cloud2Opacity" attributeType="CSS" attributeName="opacity" values="0; 1; 1; 0" keyTimes="0; 0.35; 0.9; 1" dur="1.7s" fill="freeze" begin="cloud1Translate.begin + 0.5s" xlink:href="#cloud2"/></g><defs><clipPath id="tail"><path d="M0 0h107v210H0z"/></clipPath></defs><g id="tail" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" clip-path="url(#tail)"><path id="topTail" d="M106.25 179.49h-22.2"><animateTransform id="topTailScale" attributeName="transform" type="translate" values="1 0; 10 0; 1 0" keyTimes="0; 0.5; 1" dur="1.4s" repeatCount="indefinite"/></path><path id="bottomTail" d="M106.25 201.23h-22.2"><animateTransform id="bottomTailScale" attributeName="transform" type="translate" values="1 0; 10 0; 1 0" keyTimes="0; 0.5; 1" dur="1.4s" repeatCount="indefinite" begin="topTailScale.begin + 0.2s"/></path><path id="longTail" d="M106.25 190.98H68.77"><animateTransform id="longTailScale" attributeName="transform" type="translate" values="1 0; 10 0; 1 0" keyTimes="0; 0.5; 1" dur="1.4s" repeatCount="indefinite" begin="bottomTailScale.begin + 0.2s"/></path></g><g id="mountain" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"><path id="peak" d="M289.94 327.88h-45.06l-32.08-31.3a1.89 1.89 0 00-2.44 0l-10.2 10.23a1.72 1.72 0 01-2.25 0l-19-20.17a2.4 2.4 0 00-3.1 0l-26.42 25.64a1.71 1.71 0 01-2.25 0l-2.63-2.92a1.71 1.71 0 00-2.31 0L124.63 329H80.78"><animate id="mountainFlating" attributeName="d" from="M289.94,327.88H244.88L212.8,296.58a1.89,1.89,0,0,0-2.44,0l-10.2,10.23a1.72,1.72,0,0,1-2.25,0l-19-20.17a2.4,2.4,0,0,0-3.1,0l-26.42,25.64a1.71,1.71,0,0,1-2.25,0l-2.63-2.92a1.71,1.71,0,0,0-2.31,0L124.63,329H80.78" to="M 291 329 H 244.88 L 215 329 a 1.89 1.89 0 0 0 -2.44 0 l -10.56 0 a 1.72 1.72 0 0 1 -2.25 0 l -19.75 0 a 2.4 2.4 0 0 0 -3.1 0 l -23.9 0 a 1.71 1.71 0 0 1 -2 0 l -2 0 a 1.71 1.71 0 0 0 -2.31 0 L 124.63 329 H 80.78" dur="0.4s" fill="freeze" repeatCount="1" begin="primaryAwardAppear.end + 2s"/><animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.1s" fill="freeze" begin="mountainFlating.end - 0.04s"/></path></g><animate id="opacityOut" attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.5s" fill="freeze" begin="primaryAwardAppear.end + 2.3s"/></g><path id="window" d="M220.52 120.53h-17.13c-9.681-.044-17.51-7.899-17.52-17.58V65.1c.01-9.681 7.839-17.536 17.52-17.58h17.13c9.677.05 17.5 7.903 17.51 17.58v37.83c-.005 9.683-7.827 17.545-17.51 17.6z" fill="none" stroke="#FFF" stroke-width="13" transform="matrix(.162 0 0 .132 168.5 224.3)" opacity="0"><animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.001s" fill="freeze" begin="enlargeWindowOpacity.begin"/><animateTransform attributeName="transform" type="translate" from="168.5, 224.3" to="55, 105" dur="0.6s" fill="freeze" begin="enlargeWindowOpacity.end + 0.25s"/><animateTransform id="windowTransform" attributeName="transform" type="scale" from="0.162, 0.132" to="1, 1" dur="0.6s" additive="sum" fill="freeze" begin="enlargeWindowOpacity.end + 0.25s"/><animate id="to" attributeType="CSS" attributeName="stroke-width" from="13" to="2" dur="0.2s" fill="freeze" begin="enlargeWindowOpacity.end + 0.25s"/></path><g id="floor" opacity="0"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M72.03 329h223.49"/><animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="mountainFlating.end"/></g><g id="primaryAwardTo" opacity="0"><g id="porthole" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"><defs><clipPath id="portholeClip"><use xlink:href="#portholePath"/></clipPath><path id="portholePath" d="M275 225.43h-17.13a17.6 17.6 0 01-17.52-17.58V170a17.6 17.6 0 0117.52-17.58H275A17.6 17.6 0 01292.51 170v37.83a17.61 17.61 0 01-17.51 17.6z"/></defs><g clip-path="url(#portholeClip)"><g id="cloud" transform="matrix(.5 0 0 .5 220 180)" opacity="0"><path d="M28.18 38.34h62.91"/><path d="M41.77 97.54h35.29a12.4 12.4 0 1124.8 0h17.93" transform="translate(-40.77 -69.46)"/><path d="M218.19 23.72h39.78"/><path d="M278.75 82.91h-27.36a12.4 12.4 0 10-24.8 0h-17.94" transform="translate(-40.77 -69.46)"/><path d="M246.24 13.45h22.19"/><animate id="opacityInClouds" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.2s" fill="freeze" begin="opacityIn.end - 0.6s"/><animateTransform attributeName="transform" type="translate" values="235, 0; -250, 0" dur="3s" additive="sum" begin="opacityInClouds.begin + 0.1s" repeatCount="indefinite"/></g></g></g><g id="ski" fill="#fff" opacity="0"><path d="M91.14 327.79a2.2 2.2 0 01-2-2.36l13.66-193.17c1.1-15.49-4.8-21.92-8.75-24.47a1.35 1.35 0 01.53-2.45C103 104 122.18 104 120 134.19l-13.57 192.48a2.2 2.2 0 01-2.35 2z"/><path d="M124.5 328.17a2.2 2.2 0 01-2.17-2.23l2.24-193.63c.19-15.53-6.07-21.61-10.16-23.91a1.35 1.35 0 01.39-2.47c8.36-1.9 27.49-3 27.15 27.28l-2.25 192.93a2.2 2.2 0 01-2.22 2.18z"/><animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.25s" fill="freeze" begin="opacityIn.end - 0.175s"/><animateTransform id="toTranslate" attributeName="transform" type="translate" from="-80 0" to="0 0" dur="0.3s" fill="freeze" begin="opacityIn.end - 0.175s" additive="sum"/></g><g id="chair" stroke-miterlimit="10" stroke-width="2"><path d="M257.5 259.82h-60.74v-14.19h55.09a9.92 9.92 0 019.9 9.93 4.26 4.26 0 01-4.25 4.25" fill="#a67ee5"/><path d="M257.5 259.82h-60.74v-14.19h55.09a9.92 9.92 0 019.9 9.93 4.26 4.26 0 01-4.25 4.26z" fill="none" stroke="#fff"/><path fill="#a67ee5" d="M185.47 328.31H171.5l-6.31-41.59h13.97l6.31 41.59z"/><path fill="none" stroke="#fff" d="M185.47 328.31H171.5l-6.31-41.59h13.97l6.31 41.59z"/><path fill="#a67ee5" d="M235.03 328.31h-13.97l-6.3-41.59h13.96l6.31 41.59z"/><path fill="none" stroke="#fff" d="M235.03 328.31h-13.97l-6.3-41.59h13.96l6.31 41.59z"/><path d="M281.33 272.45h-55.89a5.59 5.59 0 01-5.53-4.77l-10.86-72.24a17.71 17.71 0 00-12.49-31.31h-55.08L141.16 267l15.77 23.35 47.19 8.39a12.3 12.3 0 004.22.75h73a13.53 13.53 0 000-27.06" fill="#a67ee5"/><path d="M281.33 272.45h-55.89a5.59 5.59 0 01-5.53-4.77l-10.86-72.24a17.71 17.71 0 00-12.49-31.31h-55.08L141.16 267l15.77 23.35 47.19 8.39a12.3 12.3 0 004.22.75h73a13.53 13.53 0 00-.01-27.04z" fill="none" stroke="#fff"/><path d="M162.42 267.69l-10.86-72.24a17.71 17.71 0 10-29-13.61 18 18 0 00.79 5.25L138.65 289a12.36 12.36 0 0012.21 10.54h73a13.53 13.53 0 000-27.05h-55.91a5.62 5.62 0 01-5.53-4.78" fill="#a67ee5"/><path d="M162.42 267.69l-10.86-72.24a17.71 17.71 0 10-29-13.61 18 18 0 00.79 5.25L138.65 289a12.36 12.36 0 0012.21 10.54h73a13.53 13.53 0 000-27.05h-55.91a5.62 5.62 0 01-5.53-4.8z" fill="none" stroke="#fff"/><path d="M206.26 259.82h-72l-2.13-14.19h68.47a9.92 9.92 0 019.9 9.93 4.26 4.26 0 01-4.25 4.25" fill="#a67ee5"/><path d="M206.26 259.82h-72l-2.13-14.19h68.47a9.92 9.92 0 019.9 9.93 4.26 4.26 0 01-4.24 4.26z" fill="none" stroke="#fff"/><path fill="none" stroke="#fff" stroke-linecap="round" d="M151.57 195.44h57.48"/></g><g id="leaf" transform="translate(5 5)" opacity="0"><path d="M79.18 194a131 131 0 0115.59 26.9 255 255 0 01-20.08-23.55 259 259 0 01-17.07-25.88A131.72 131.72 0 0179.18 194" fill="#36e69a"/><path d="M80.94 214.39a127.19 127.19 0 0122.8 20.49 242.09 242.09 0 01-25.84-15.71 235.86 235.86 0 01-23.42-18.7 119.82 119.82 0 0126.46 13.92" fill="#36e69a"/><path d="M93.66 205.48a258.38 258.38 0 0010.08 29.39 125.63 125.63 0 00-4.5-30.52 135.9 135.9 0 00-12.06-29.44 260.33 260.33 0 006.47 30.57" fill="#36e69a"/><path d="M107.32 213.52a250.14 250.14 0 002.06 30.67 119.93 119.93 0 003.76-30.05 131.24 131.24 0 00-4-31.36 238.1 238.1 0 00-1.87 30.74" fill="#25b774"/><path d="M83.08 229.56a121.93 121.93 0 0126.29 14.64 225.91 225.91 0 01-28.16-9.2 228.11 228.11 0 01-26.37-12.69 113.61 113.61 0 0128.25 7.29" fill="#25b774"/><path d="M88.06 243.83A118.11 118.11 0 01115.62 255a211 211 0 01-28.78-5.6 220.87 220.87 0 01-27.42-9.33 114 114 0 0128.65 3.73" fill="#25b774"/><path d="M118.71 224.79a238 238 0 00-3.1 30.25 117.11 117.11 0 008.82-28.54 127.44 127.44 0 001.42-31.19 213.92 213.92 0 00-7.15 29.48" fill="#25b774"/><path d="M98.86 262a118.24 118.24 0 0127.07 12.34 212.3 212.3 0 01-28.53-6.79 220.78 220.78 0 01-27-10.45 114.06 114.06 0 0128.46 4.9" fill="#068e4d"/><path d="M130.27 244.29a236.56 236.56 0 00-4.34 30.1 116.94 116.94 0 0010-28.16 127.42 127.42 0 002.71-31.1 214.43 214.43 0 00-8.36 29.16" fill="#068e4d"/><path d="M108.9 280.69a118.21 118.21 0 0126.54 13.47 213.62 213.62 0 01-28.23-8 221.65 221.65 0 01-26.55-11.57 113.82 113.82 0 0128.24 6.08" fill="#068e4d"/><path d="M141 264.26a236.09 236.09 0 00-5.58 29.9 117.46 117.46 0 0011.15-27.73 127.2 127.2 0 004-31 214.24 214.24 0 00-9.57 28.83" fill="#068e4d"/><path d="M92.62 217.67A529.26 529.26 0 01149.48 328" fill="none" stroke="#36e69a" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><animate attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.3s" fill="freeze" begin="opacityIn.end - 0.25s"/><animateTransform attributeName="transform" type="rotate" values="0 204 235; 5 204 235; 0 204 235;" keyTimes="0; 0.5; 1" dur="2s" additive="sum" begin="opacityIn.end" repeatCount="indefinite"/><animateTransform attributeName="transform" type="translate" values="-8 -5; 0 0; -8 -5;" keyTimes="0; 0.5; 1" dur="2s" additive="sum" begin="opacityIn.end" repeatCount="indefinite"/></g><animate id="opacityIn" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.25s" fill="freeze" begin="opacityOut.end"/><animateTransform id="translateIn" attributeName="transform" type="translate" from="-170 0" to="0 0" dur="0.3s" fill="freeze" begin="opacityOut.end" additive="sum"/></g></svg>
+                <picture>
+                  <source srcset="img/prize1-mob.svg" media="(orientation: portrait)">
+                  <img src="img/prize1.svg" alt="">
+                </picture>
+              </div>
+              <p class="prizes__desc">
+                <b>3</b>
+                <span>загадочных путешествия</span>
+              </p>
+            </li>
+            <li class="prizes__item prizes__item--cases" id="prizes-cases">
+              <div class="prizes__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 330" opacity="0"><animate id="secondaryAwardAppear" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.4s" begin="indefinite" restart="whenNotActive" fill="freeze"/><defs><path id="suitcaseFlyPath" d="M179 111c24.19-9.24 29.8-15.84 29.42-20.44C207.18 75.43 138.73 51.78 96 84c-2.93 2.21-31.66 24.52-29 54 3.54 39.18 59.83 61.15 75.7 67.35 53.65 20.94 94.43 8.79 101.78 27.18 2.89 7.25.78 19.69-21.48 42.47" fill="none" stroke="#000" stroke-miterlimit="10"/></defs><g id="clouds"><g id="cloudContour" transform="translate(80)" opacity="0"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M65.43 77.72h39.78"/><g fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2"><path d="M85.22 67.45H57.86a12.4 12.4 0 10-24.8 0H15.13"/><path d="M93.48 67.45h22.2"/></g><set id="cloudContourAppear" attributeName="opacity" to="1" dur="0.05s" fill="freeze" begin="secondaryAwardAppear.end - 0.1s"/><animateTransform id="cloudContourTranslate" attributeName="transform" type="translate" from="80 0" to="0 0" dur="0.2s" begin="cloudContourAppear.end" fill="freeze"/></g><g id="cloudSolid" transform="translate(110)" opacity="0"><path d="M235.77 119h-19.45a35.49 35.49 0 00-68-13.69 26.34 26.34 0 00-12.89-3.31 26.72 26.72 0 00-24.8 17H95.48a10.49 10.49 0 000 21h140.3a10.49 10.49 0 000-21" fill="#fff"/><set id="cloudSolidAppear" attributeName="opacity" to="1" dur="0.05s" fill="freeze" begin="cloudContourTranslate.end - 0.175s"/><animateTransform id="cloudSolidTranslate" attributeName="transform" type="translate" from="110 0" to="0 0" dur="0.13s" begin="cloudSolidAppear.end" fill="freeze"/></g><g id="cloudLines" transform="translate(50)" opacity="0"><path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M272.13 145.27h39.77"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M300.17 135h22.2"/><set id="cloudLinesAppear" attributeName="opacity" to="1" dur="0.05s" fill="freeze" begin="cloudSolidTranslate.end - 0.1s"/><animateTransform attributeName="transform" type="translate" from="50 0" to="0 0" dur="0.1s" begin="cloudLinesAppear.end - 0.1s" fill="freeze"/></g><animateTransform id="cloudsFadeOut" attributeName="transform" type="translate" from="0 0" to="0 -200" dur="0.75s" fill="freeze" begin="groundLineScale.end + 0.6s"/><animate attributeType="CSS" attributeName="opacity" from="1" to="0" dur="0.5s" fill="freeze" begin="cloudsFadeOut.begin"/></g><g id="leafBig"><path d="M263.47 206.82a2 2 0 013.15 2c-1 7-2.07 20.33 4.85 19.4 4.94-.66-16.65-31.53 19.32-38.16a2 2 0 012.18 2.89c-1.32 2.74-2.83 6.61-2.73 9.9a2 2 0 003.71 1c4.1-6.15 15.1-17.86 36.59-10.7a2 2 0 011.35 1.54c.93 4.8 4.13 23.24-.29 28.72-5.09 6.31-15 4.14-16.18 10.25-1.3 6.91 7.51 4.82 13.42-.22a2 2 0 013.32 1.64c-.25 5.45-2.18 14-11.12 18.69-13.78 7.21-23.48-7-25.19-3.88-2.59 4.66 7.94 8.47 13.78 10.18a2 2 0 01.61 3.59c-10.52 7.74-29.13 10.28-37-5.41-8.3-16.59-12.93-12.49-18.19-20.38-5.71-8.57-4.33-22.54 8.38-31.05m29.4 32.47c.5 2.73 5.2 3.51 8.35 2.94s8.47-3.83 8-6.56-6.62-3.9-9.78-3.33-7.05 4.22-6.55 6.95" fill="#e81a5a"><animateTransform id="leafBigRotation" attributeName="transform" type="rotate" values="0 255 245; 7 255 245; 0 255 245" keyTimes="0; 0.5; 1" dur="2s" repeatCount="indefinite" begin="secondaryAwardAppear.begin"/></path><path d="M263 327.88s-4.91-70.27 5.54-80.72" fill="none" stroke="#e81a5a" stroke-miterlimit="10" stroke-width="2"/></g><g id="parachuteSuitcase" opacity="0"><path d="M251.89 328.88a3.54 3.54 0 003.53-3.53v-5.07a3.53 3.53 0 10-7.06 0v5.07a3.55 3.55 0 003.53 3.53" fill="#a67ee5"/><path d="M251.89 328.88a3.54 3.54 0 003.53-3.53v-5.07a3.53 3.53 0 10-7.06 0v5.07a3.55 3.55 0 003.53 3.53z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M176.35 328.88a3.54 3.54 0 003.53-3.53v-5.07a3.53 3.53 0 10-7.06 0v5.07a3.54 3.54 0 003.53 3.53" fill="#a67ee5"/><path d="M176.35 328.88a3.54 3.54 0 003.53-3.53v-5.07a3.53 3.53 0 10-7.06 0v5.07a3.54 3.54 0 003.53 3.53z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M170.92 320.29h74.5a11.38 11.38 0 0011.35-11.35v-66.08a11.38 11.38 0 00-11.35-11.35h-74.5a11.38 11.38 0 00-11.35 11.35v66.08a11.38 11.38 0 0011.35 11.35" fill="#a67ee5"/><rect x="159.57" y="231.51" width="97.2" height="88.78" rx="11.35" ry="11.35" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M199.26 219.15h32.4a4.09 4.09 0 014.08 4.08v16a1.19 1.19 0 01-1.19 1.19h-2.7a1.19 1.19 0 01-1.19-1.19v-14.37a1.27 1.27 0 00-1.27-1.27h-27.86a1.27 1.27 0 00-1.27 1.27v14.38a1.19 1.19 0 01-1.19 1.19h-2.7a1.19 1.19 0 01-1.19-1.19v-16a4.1 4.1 0 014.09-4.08" fill="#a67ee5"/><path d="M199.26 219.15h32.4a4.09 4.09 0 014.08 4.08v16a1.19 1.19 0 01-1.19 1.19h-2.7a1.19 1.19 0 01-1.19-1.19v-14.37a1.27 1.27 0 00-1.27-1.27h-27.86a1.27 1.27 0 00-1.27 1.27v14.38a1.19 1.19 0 01-1.19 1.19h-2.7a1.19 1.19 0 01-1.19-1.19v-16a4.1 4.1 0 014.08-4.09z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M185.34 320.29h74.5a11.38 11.38 0 0011.35-11.35v-66.08a11.38 11.38 0 00-11.35-11.35h-74.5A11.38 11.38 0 00174 242.86v66.08a11.39 11.39 0 0011.35 11.35" fill="#a67ee5"/><path d="M185.34 320.29h74.5a11.38 11.38 0 0011.35-11.35v-66.08a11.38 11.38 0 00-11.35-11.35h-74.5A11.38 11.38 0 00174 242.86v66.08a11.39 11.39 0 0011.34 11.35z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M254.22 252.43h-63.25"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M254.22 275.9h-63.25"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M254.22 299.38h-63.25"/><path d="M168.12 253.68h.67v44.46h-.67a3.53 3.53 0 01-3.52-3.51V257.2a3.52 3.52 0 013.52-3.52" fill="#a67ee5"/><path d="M168.12 253.68h.67v44.46h-.67a3.53 3.53 0 01-3.52-3.51V257.2a3.52 3.52 0 013.52-3.52z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M215.46 218.86l-55.59-79.83"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M215.46 218.86l-18.53-79.83"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M233.99 139.03l-18.53 79.83"/><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M271.04 139.03l-55.58 79.83"/><g><path d="M215.46 83.44A55.58 55.58 0 01271 139c0-6.76-8.3-12.25-18.53-12.25s-18.31 5.35-18.52 12v.26c0-6.76-8.3-12.25-18.53-12.25s-18.54 5.49-18.54 12.25v-.26c-.22-6.64-8.42-12-18.52-12s-18.52 5.49-18.52 12.25a55.58 55.58 0 0155.59-55.59m0-1.66A57.31 57.31 0 00158.22 139a1.66 1.66 0 103.32 0c0-5.84 7.57-10.59 16.87-10.59 9.11 0 16.68 4.66 16.86 10.38v.21a1.66 1.66 0 003.32 0c0-5.84 7.57-10.59 16.87-10.59s16.87 4.75 16.87 10.59a1.66 1.66 0 003.32 0v-.21c.18-5.73 7.74-10.39 16.86-10.39 9.3 0 16.87 4.75 16.87 10.59a1.66 1.66 0 103.32 0 57.3 57.3 0 00-57.23-57.25" fill="#fff"/><path d="M215.46 83.44c9.92 0 18 20.9 18.54 55.33.21-6.65 8.41-12 18.52-12S271 132.27 271 139a55.59 55.59 0 00-55.59-55.59" fill="#e81a5a"/><path d="M215.45 83.44A55.58 55.58 0 00159.87 139c0-6.76 8.3-12.25 18.52-12.25s18.3 5.35 18.52 12c.52-34.43 8.61-55.32 18.53-55.32" fill="#fe6183"/><path d="M215.46 83.44c-9.93 0-18 20.9-18.54 55.32v.26c0-6.76 8.3-12.25 18.53-12.25S234 132.27 234 139v-.26c-.51-34.43-8.6-55.33-18.52-55.33" fill="#f7396b"/></g><set id="siutcaseAppear" attributeName="opacity" to="1" dur="0.1s" fill="freeze" begin="groundLineScale.end + 0.1s"/><animateTransform attributeName="transform" type="scale" values="0 0; 0.5, 0.5; 1, 1" keyTimes="0; 0.7; 1" dur="2.2s" additive="sum" fill="freeze" begin="groundLineScale.end"/><animateTransform attributeName="transform" type="rotate" values="30; -30; 20; 18.29; -6.48; 0" keyTimes="0; 0.35; 0.6; 0.65; 0.9; 1" dur="2.2s" additive="sum" fill="freeze" begin="groundLineScale.end"/><animateTransform attributeName="transform" type="translate" values="-30 -150; -220 -275" keyTimes="0; 1" dur="2.2s" additive="sum" fill="freeze" begin="groundLineScale.end"/><animateMotion dur="2.2s" fill="freeze" begin="groundLineScale.end"><mpath href="#suitcaseFlyPath"/></animateMotion></g><g id="leafSmall"><path d="M322.92 283.4a2.14 2.14 0 01.55 2.17c-1.06 3.43-4.58 12.85-12.1 16.34-5.13 2.38-8.33-2.7-10.92.77s2.1 5 6.92 4.31a2.16 2.16 0 012.14 3.34 14.34 14.34 0 01-11.73 6.67c-10.84.27-12.55-11.58-14.57-10.19-2.72 1.89 1.27 6.55 4.39 9.57a2.16 2.16 0 01-1.3 3.71c-8.76.84-19.72-3.51-19.8-15-.08-12.94-4.25-11.8-5.11-18.35-.91-6.88 3.88-14.88 13.74-16.69a2.16 2.16 0 012.31 3.11c-2.41 4.73-6 12.6-2.82 12.56 3.46 0-1.58-22.58 28.43-15.26a2.16 2.16 0 011.09 3.54l-.1.11a2.16 2.16 0 002.41 3.45c3.66-1.52 9.16-1.27 16.47 5.84" fill="#fe6183"/><path d="M245.13 327.88s3.48-30.11 21.7-30.11" fill="none" stroke="#fe6183" stroke-miterlimit="10" stroke-width="2"/><animateTransform id="leafSmallRotation" attributeName="transform" type="rotate" values="-5 244 331; 2 244 331; -1 244 331; 8 244 331; -5 244 331" keyTimes="0; 0.2; 0.4; 0.7; 1" dur="3s" repeatCount="indefinite" begin="secondaryAwardAppear.begin"/></g><g id="groundLine" opacity="0"><path fill="none" stroke="#fff" stroke-width="2" d="M41.13 329h278"/><set id="groundLineOpacity" attributeName="opacity" to="1" dur="0.05s" fill="freeze" begin="secondaryAwardAppear.end - 0.1s"/><animateTransform id="groundLineTranslate" attributeName="transform" type="translate" from="-300 0" to="125 0" dur="0.4s" additive="sum" fill="freeze" begin="groundLineOpacity.begin"/><animateTransform id="groundLineScale" attributeName="transform" type="scale" values="1 1; 0.475 1; 0.5 1" keyTimes="0; 0.95; 1" begin="groundLineTranslate.begin + 0.2s" dur="0.3s" additive="sum" fill="freeze"/></g></svg>
+                <picture>
+                  <source srcset="img/prize2-mob.svg" media="(orientation: portrait)">
+                  <img src="img/prize2.svg" alt="">
+                </picture>
+              </div>
+              <p class="prizes__desc">
+                <b>7</b>
+                <span>надежных чемоданов</span>
+              </p>
+            </li>
+            <li class="prizes__item prizes__item--codes" id="prizes-codes">
+              <div class="prizes__icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 330" opacity="0"><animate id="additionalAwardAppear" attributeType="CSS" attributeName="opacity" from="0" to="1" dur="0.4s" fill="freeze" begin="indefinite" restart="whenNotActive"/><animateTransform id="additionalAwardTranslate" attributeName="transform" type="translate" from="100 0" to="0 0" dur="0.4s" fill="freeze" begin="additionalAwardAppear.begin"/><defs><clipPath id="colibriWingClip"><path stroke="#fff" d="M280 172h29v23h-29z"/></clipPath></defs><g id="suitcaseTopSideClosed"><path d="M225.88 258.06H82.68a11.62 11.62 0 00-11.57 11.61v19.75h166.33v-19.76a11.62 11.62 0 00-11.56-11.61" fill="#a67ee5"/><path d="M225.88 258.06H82.68a11.62 11.62 0 00-11.57 11.61v19.75h166.33v-19.76a11.62 11.62 0 00-11.56-11.6z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M267.11 258.06H119.23a11.81 11.81 0 00-11.93 11.61v19.75H279v-19.76a11.81 11.81 0 00-11.93-11.61" fill="#a67ee5"/><path d="M267.11 258.06H119.23a11.81 11.81 0 00-11.93 11.61v19.75H279v-19.76a11.81 11.81 0 00-11.89-11.6z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M278.74 279.41a5.34 5.34 0 10-5.32-5.34 5.32 5.32 0 005.32 5.34" fill="#a67ee5"/><ellipse cx="278.74" cy="274.07" rx="5.31" ry="5.34" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M277.62 269.66v9.75h-10.73a5.72 5.72 0 01-5.71-5.73v-15.62h4.88a11.61 11.61 0 0111.56 11.61" fill="#a67ee5"/><path d="M277.62 269.66v9.75h-10.73a5.72 5.72 0 01-5.71-5.73v-15.62h4.88a11.61 11.61 0 0111.56 11.6z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><set attributeName="opacity" to="0" begin="additionalAwardAppear.end + 0.1s"/></g><g id="additionalAwardTo" opacity="0"><g id="suitcaseTopSideOpened"><path d="M253.93 232.11a5.69 5.69 0 10-5.69-5.69 5.69 5.69 0 005.69 5.69" fill="#a67ee5"/><circle cx="253.93" cy="226.42" r="5.69" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M240.3 210.48H67.19a12 12 0 00-12 11.9V276a13 13 0 0013 13h184v-66.62a12 12 0 00-11.94-11.9" fill="#a67ee5"/><path d="M240.3 210.48H67.19a12 12 0 00-12 11.9V276a13 13 0 0013 13h184v-66.62a12 12 0 00-11.89-11.9z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M70.24 289v-63.51a15 15 0 0115-15h.5" fill="none" stroke="#fff" stroke-width="2"/></g><g id="flowers"><path d="M180.73 277.8s8.3-74.59 39.71-90" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M217.95 187.12l9.27-24.49a22 22 0 018.72 3 7.87 7.87 0 019.72 12.33 22.14 22.14 0 01.86 9.18l-26 3.3a2.45 2.45 0 01-2.6-3.29" fill="#3b7bf2"/><path d="M178.24 287.63s6.89-44.68 37.95-56.53" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M210.85 232l9-16.47a16.66 16.66 0 016.13 2.93 5.93 5.93 0 014-.42 5.67 5.67 0 014.26 6.85 5.54 5.54 0 01-2.29 3.23 15.1 15.1 0 01-.21 6.58l-19.34-.11a1.76 1.76 0 01-1.6-2.58" fill="#3b7bf2"/><animateTransform attributeName="transform" type="translate" from="0 6" to="0 0" keySplines="0.42, 0.0, 0.58, 1.0" dur="1s" fill="freeze" begin="additionalAwardToAppear.begin"/><animateTransform attributeName="transform" type="rotate" values="65 190 290; -7 190 290; 7 190 290; -5 190 290; 0 190 290; 3 190 290; 0 190 290" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0" keyTimes="0; 0.25; 0.4; 0.55; 0.7; 0.85; 1" dur="1.5s" fill="freeze" additive="sum" begin="additionalAwardToAppear.begin"/></g><g id="balloon"><path id="balloonString" style="transform-origin:bottom" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" opacity="0" d="M107.65 171.71v122.31"><set attributeName="opacity" to="1" begin="additionalAwardToAppear.begin + 0.1s"/><animateTransform id="lineScale" attributeName="transform" type="scale" from="1, 0" to="1, 1.2" keySplines="0.42, 0.0, 0.58, 1.0" dur="0.4s" additive="sum" fill="freeze" begin="additionalAwardToAppear.begin + 0.1s"/><animateTransform attributeName="transform" type="rotate" values="0; 5; -3; 0; 0" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0" keyTimes="0; 0.25; 0.5; 0.75; 1" dur="1s" additive="sum" fill="freeze" begin="balloonRotate.end"/></path><g id="balloonBody"><path d="M106.58 161.87l-2.19 3.79a1.34 1.34 0 001.17 2h4.37a1.34 1.34 0 001.16-2l-2.18-3.79a1.35 1.35 0 00-2.33 0" fill="#fff"/><path d="M107.74 79.42a32.91 32.91 0 0132.9 32.89c0 18.17-15.09 48.89-33.25 48.89s-32.55-30.73-32.55-48.89a32.91 32.91 0 0132.9-32.89m0-1.61a34.54 34.54 0 00-34.5 34.5c0 9.51 3.8 22.1 9.68 32.07 7 11.88 15.68 18.42 24.46 18.42s17.6-6.54 24.81-18.4c6.1-10 10.05-22.64 10.05-32.09a34.54 34.54 0 00-34.5-34.5" fill="#fff"/><path d="M96.06 112.39c0-18.16 5.23-32.89 11.68-32.89a32.91 32.91 0 00-32.9 32.89c0 18.17 14.38 48.89 32.55 48.89h.17c-6.43-.19-11.5-30.77-11.5-48.89" fill="#76abff"/><path d="M140.64 112.39a32.91 32.91 0 00-32.9-32.89c6.45 0 11.68 14.73 11.68 32.89s-5.29 48.48-11.68 48.87c18-.39 32.9-30.82 32.9-48.87" fill="#1553b7"/><path d="M119.42 112.39c0-18.16-5.23-32.89-11.68-32.89s-11.68 14.73-11.68 32.89 5.07 48.69 11.5 48.89h.18c6.39-.4 11.68-30.83 11.68-48.88" fill="#3b7bf2"/><path d="M100.54 105.36a5.7 5.7 0 105.7 5.7 5.39 5.39 0 00-5.7-5.7m0 8c-1.86 0-3.06-.93-3.06-2.29s1.21-2.29 3.06-2.29 3.07.93 3.07 2.29-1.25 2.29-3.07 2.29" fill="#fff"/><path d="M114.74 105.36a1.78 1.78 0 011.46 2.8l-13.33 19.34a1.79 1.79 0 01-2.94-2l13.34-19.34a1.77 1.77 0 011.47-.77" fill="#fff"/><path d="M116.21 116.88a5.7 5.7 0 105.7 5.7 5.4 5.4 0 00-5.7-5.7m0 8c-1.86 0-3.06-.93-3.06-2.29s1.21-2.29 3.06-2.29 3.07.9 3.07 2.29-1.21 2.29-3.07 2.29" fill="#fff"/><animateTransform id="balloonTranslate" attributeName="transform" type="translate" from="0 208" to="0 0" dur="0.5s" fill="freeze" additive="sum" begin="additionalAwardToAppear.begin"/><animateTransform id="balloonRotate" attributeName="transform" type="rotate" from="45 108 164" to="10 108 164" keySplines="0.42, 0.0, 0.58, 1.0" dur="0.5s" additive="sum" fill="freeze" begin="additionalAwardToAppear.begin"/><animateTransform attributeName="transform" type="translate" values="0 0; 10 10; -5 0; 0 5; 0 10;" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0" keyTimes="0; 0.25; 0.5; 0.75; 1" dur="1s" fill="freeze" additive="sum" begin="balloonTranslate.end"/><animateTransform attributeName="transform" type="rotate" values="0 108 164; -20 108 164; 10 108 164; -5 108 164; -10 108 164" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0" keyTimes="0; 0.25; 0.5; 0.75; 1" dur="1s" additive="sum" fill="freeze" begin="balloonRotate.end"/></g></g><g id="colibri"><g id="colibriBody"><g style="transform-origin:center center;transform-box:fill-box"><path d="M279.2 183.8a4.89 4.89 0 013.8-4.8l21.07-5.4c-7.78 14.84-19.18 15.07-20 15.07a4.9 4.9 0 01-4.85-4.9" fill="#fff" style="transform-origin:left bottom;transform-box:fill-box" id="colibriWing"><animateTransform attributeName="transform" type="scale" values="1, 1; -0.432, 0.95; 1, 1; -0.432, 0.95; 1, 1" dur="300ms" keyTimes="0; 0.335; 0.5; 0.665; 1" calcMode="linear" fill="freeze" repeatCount="indefinite"/></path></g><path d="M262.24 169.86H273a4.65 4.65 0 014.41-2.9 3.91 3.91 0 013.48 1.76 13.39 13.39 0 011.37 2.59c.63 1.57 4 15.8 5.89 19.16 1.1 2 4.39 7.16 4.39 7.16a2.3 2.3 0 01.31 1.15V208s-3.11-1.08-3.11-3.91v-6.53c-1.91.27-6-1.65-8.33-2.88a12.82 12.82 0 01-6.36-6.76 12.33 12.33 0 01-.11-9.16 7.13 7.13 0 00.79-2.91c-.06-1.14-1.39-2.72-2.18-4.05z" fill="#fff"/><animateTransform id="colibriAppear" attributeName="transform" type="translate" from="-80 160" to="0 0" dur="0.4s" fill="freeze" begin="additionalAwardToAppear.begin"/><animateTransform attributeName="transform" type="rotate" from="-55 240 150" to="0 240 150" dur="0.4s" additive="sum" fill="freeze" begin="additionalAwardToAppear.begin"/></g><animateTransform attributeName="transform" type="translate" values="-10 7; 0 0; -10 3; 0 0; -10 7" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;" keyTimes="0; 0.4; 0.6; 0.8; 1" dur="3s" additive="sum" repeatCount="indefinite"/><animateTransform attributeName="transform" type="rotate" values="-13 260 170; 5 260 170; 0 260 170; 5 260 170; -13 260 170" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0;" keyTimes="0; 0.4; 0.6; 0.8; 1" dur="2s" repeatCount="indefinite" additive="sum" begin="colibriAppear.end - 0.2s"/></g><g id="branchLong"><path d="M141.77 204.16c24.1 32.45 35.81 84 35.81 84" fill="none" stroke="#3b7bf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M125.73 196.22c6.54 7.51 17.16 9 17.16 9s0-10.72-6.53-18.22-17.17-9-17.17-9 0 10.72 6.54 18.22" fill="#76abff"/><path d="M153.17 206.54c-2.69 9.58 1.91 19.27 1.91 19.27s9-5.86 11.67-15.45-1.91-19.27-1.91-19.27-9 5.86-11.67 15.45" fill="#3b7bf2"/><path d="M135.82 227.71c9.59 2.7 19.26-1.91 19.26-1.91s-5.86-9-15.45-11.67-19.26 1.87-19.26 1.87 5.87 9 15.45 11.67" fill="#3b7bf2"/><path d="M166.1 232.52c-3.41 9.36.47 19.35.47 19.35s9.39-5.18 12.79-14.53-.47-19.34-.47-19.34-9.39 5.18-12.79 14.53" fill="#1553b7"/><path d="M147.22 252.35c9.36 3.4 19.35-.47 19.35-.47s-5.18-9.39-14.54-12.79-19.35.47-19.35.47 5.18 9.39 14.54 12.79" fill="#1553b7"/><animateTransform attributeName="transform" type="translate" from="0 4" to="0 0" keySplines="0.42, 0.0, 0.58, 1.0" dur="1s" fill="freeze" begin="additionalAwardToAppear.begin"/><animateTransform id="longBranchAppear" attributeName="transform" type="rotate" values="75 180 285; -10 180 285; 5 180 285; -3 180 285; 0 180 285;" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0" keyTimes="0; 0.3; 0.6; 0.8; 1" dur="1.5s" fill="freeze" additive="sum" begin="additionalAwardToAppear.begin"/></g><g id="branchShort"><path d="M183.79 264.77c2.3 9.1-2.27 18.12-2.27 18.12s-8.32-5.74-10.63-14.85 2.27-18.12 2.27-18.12 8.32 5.75 10.63 14.85" fill="#3b7bf2"/><path d="M199.63 285.16c-9.11 2.31-18.12-2.27-18.12-2.27s5.74-8.32 14.85-10.63 18.12 2.27 18.12 2.27-5.75 8.32-14.85 10.63" fill="#3b7bf2"/><path d="M188.56 271.67a144.15 144.15 0 00-10.31 16.61" fill="none" stroke="#3b7bf2" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/><path d="M203.69 264.19c-6.17 7.08-16.19 8.44-16.19 8.44s0-10.11 6.16-17.18 16.19-8.45 16.19-8.45 0 10.11-6.16 17.19" fill="#76abff"/><animateTransform attributeName="transform" type="translate" from="0 4" to="0 0" values="0 4; 0 0" keySplines="0.42, 0.0, 0.58, 1.0" dur="1s" fill="freeze" additive="sum" begin="additionalAwardToAppear.begin"/><animateTransform attributeName="transform" type="rotate" values="70 180 285; -10 180 285; 0 180 285; 5 180 285; 0 180 285;" keySplines="0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0; 0.42, 0.0, 0.58, 1.0" keyTimes="0; 0.3; 0.5; 0.8; 1" dur="1.5s" fill="freeze" additive="sum" begin="additionalAwardToAppear.begin"/></g><set id="additionalAwardToAppear" attributeName="opacity" to="1" begin="additionalAwardAppear.end + 0.1s"/></g><g id="suitcaseBottomSide"><path d="M280.29 318.62a5.72 5.72 0 10-5.12-5.69 5.43 5.43 0 005.12 5.69" fill="#a67ee5"/><ellipse cx="280.29" cy="312.93" rx="5.12" ry="5.69" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M230.22 328.86h-148a11.85 11.85 0 01-11.95-11.67V289h171.89v28.17a11.84 11.84 0 01-11.94 11.67" fill="#a67ee5"/><path d="M230.22 328.86h-148a11.85 11.85 0 01-11.95-11.67V289h171.89v28.17a11.84 11.84 0 01-11.94 11.69z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M266.72 328.86h-147a11.81 11.81 0 01-11.87-11.67V289h170.73v28.17a11.79 11.79 0 01-11.86 11.67" fill="#a67ee5"/><path d="M266.72 328.86h-147a11.81 11.81 0 01-11.87-11.67V289h170.73v28.17a11.79 11.79 0 01-11.86 11.69z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M215 314.07h-34.51a4.27 4.27 0 01-4.35-4.16v-11.7a1.24 1.24 0 011.27-1.22h2.88a1.25 1.25 0 011.27 1.22v10a1.33 1.33 0 001.35 1.29h29.71a1.33 1.33 0 001.35-1.29v-10a1.24 1.24 0 011.27-1.22h2.88a1.25 1.25 0 011.27 1.22v11.69a4.27 4.27 0 01-4.35 4.16" fill="#a67ee5"/><path d="M215 314.07h-34.51a4.27 4.27 0 01-4.35-4.16v-11.7a1.24 1.24 0 011.27-1.22h2.88a1.25 1.25 0 011.27 1.22v10a1.33 1.33 0 001.35 1.29h29.71a1.33 1.33 0 001.35-1.29v-10a1.24 1.24 0 011.27-1.22h2.88a1.25 1.25 0 011.27 1.22v11.69a4.27 4.27 0 01-4.39 4.17z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path fill="#a67ee5" d="M138.58 282.19h9.1v12.52h-9.1z"/><path fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2" d="M138.58 282.19h9.1v12.52h-9.1z"/><path fill="#a67ee5" d="M247.85 282.19h9.1v12.52h-9.1z"/><path fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2" d="M247.85 282.19h9.1v12.52h-9.1z"/><path d="M278.58 317.11v-9.87h-10.4a5.67 5.67 0 00-5.53 5.8v15.82h4.73c6.16 0 11.2-5.29 11.2-11.75" fill="#a67ee5"/><path d="M278.58 317.11v-9.87h-10.4a5.67 5.67 0 00-5.53 5.8v15.82h4.73c6.16 0 11.2-5.28 11.2-11.75z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/><path d="M100 301.54H79.22a1 1 0 01-1-1V298a1 1 0 011-1H100a1 1 0 011 1v2.58a1 1 0 01-1 1" fill="#a67ee5"/><path d="M100 301.54H79.22a1 1 0 01-1-1V298a1 1 0 011-1H100a1 1 0 011 1v2.58a1 1 0 01-1 .96z" fill="none" stroke="#fff" stroke-miterlimit="10" stroke-width="2"/></g><path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M46.24 329h257.52" id="groundLine"/></svg>
+                <picture>
+                  <source srcset="img/prize3-mob.svg" media="(orientation: portrait)">
+                  <img src="img/prize3.svg" alt="">
+                </picture>
+              </div>
+              <p class="prizes__desc">
+                <b>900</b>
+                <span>
+                  промокодов на&nbsp;скидку 15%
+                  <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.353L3.903 4.99 0 3.647l1.346-2.323L4.443 4.01 3.673 0h2.673l-.77 4.01 3.078-2.686L10 3.647 6.134 4.99 10 6.353 8.654 8.657 5.577 5.989 6.347 10H3.673l.769-4.03-3.097 2.687L0 6.353z" fill="currentColor"/></svg>
+                </span>
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="screen__footer js-footer">
+        <button class="screen__footer-enlarge js-footer-toggler" type="button" aria-label="Показать сообщение">
+          <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.353L3.903 4.99 0 3.647l1.346-2.323L4.443 4.01 3.673 0h2.673l-.77 4.01 3.078-2.686L10 3.647 6.134 4.99 10 6.353 8.654 8.657 5.577 5.989 6.347 10H3.673l.769-4.03-3.097 2.687L0 6.353z" fill="currentColor"/></svg>
+        </button>
+        <button class="screen__footer-collapse js-footer-toggler" type="button" aria-label="Скрыть сообщение">
+          <svg width="13" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" d="M12.354.354L.738 11.969"/><path stroke="currentColor" d="M.738.54l11.615 11.615"/></svg>
+        </button>
+        <div class="screen__footer-wrapper">
+          <div class="screen__footer-announce">
+            <p class="screen__footer-label">Даты проведения конкурса:</p>
+            <p class="screen__footer-date">01 — 31.05 / 2020</p>
+          </div>
+          <div class="screen__footer-note">
+            <p>
+              <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0 6.353L3.903 4.99 0 3.647l1.346-2.323L4.443 4.01 3.673 0h2.673l-.77 4.01 3.078-2.686L10 3.647 6.134 4.99 10 6.353 8.654 8.657 5.577 5.989 6.347 10H3.673l.769-4.03-3.097 2.687L0 6.353z" fill="currentColor"/></svg>
+              <span>Скидка&nbsp;15% на&nbsp;единоразовое приобретение путёвки с&nbsp;1&nbsp;июня 2020 по&nbsp;31&nbsp;мая 2022&nbsp;года. Суммируется с&nbsp;другими акциями</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--rules" id="rules">
+      <div class="screen__wrapper">
+        <div class="rules">
+          <h2 class="rules__title">Правила</h2>
+          <div class="rules__lead">
+            <p>Для того чтобы получить наследство Джеймса Таргета, тебе нужно выведать у&nbsp;&laquo;Сони&raquo;, куда предстоит отправиться тебе в&nbsp;случае победы</p>
+          </div>
+          <ol class="rules__list">
+            <li class="rules__item">
+              <p>Тебе отводится <br>5&nbsp;минут</p>
+            </li>
+            <li class="rules__item">
+              <p>Задавай любые вопросы в&nbsp;текстовом поле</p>
+            </li>
+            <li class="rules__item">
+              <p>Нажимай кнопку &laquo;Узнать&raquo;, чтобы получить ответ</p>
+            </li>
+            <li class="rules__item">
+              <p>&laquo;Соня&raquo; может отвечать только&nbsp;Да или Нет</p>
+            </li>
+          </ol>
+          <a href="#game" class="rules__link btn">Погнали!</a>
+        </div>
+      </div>
+      <div class="screen__disclaimer">
+        <div class="disclaimer">
+          <ul>
+            <li>
+              <a href="#">Правовая информация</a>
+            </li>
+            <li>
+              <a href="#">Подробные правила</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--game" id="game">
+      <div class="screen__wrapper">
+        <div class="game">
+          <div class="game__header">
+            <h2 class="game__title">Игра</h2>
+            <div class="game__counter">
+              <span>05</span>:<span>00</span>
+            </div>
+          </div>
+          <div class="game__body">
+            <div class="chat">
+              <div class="chat__body js-chat">
+                <ul class="chat__list" id="messages"></ul>
+              </div>
+              <div class="chat__footer">
+                <form action="#" method="post" class="form" id="message-form">
+                  <label for="message-field" class="visually-hidden">Поле для ввода вопроса</label>
+                  <input type="text" class="form__field" id="message-field">
+                  <button class="form__button btn">
+                    Узнать
+                    <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" d="M9 19V1"/><path d="M1 9l8-8 8 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <!-- временные кнопки для показа результата -->
+          <div class="game__buttons">
+            <button class="game__button btn js-show-result" type="button" data-target="result">Положительный результат</button>
+            <button class="game__button btn js-show-result" type="button" data-target="result2">Положительный результат - 2</button>
+            <button class="game__button btn js-show-result" type="button" data-target="result3">Отрицательный результат</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--result" id="result">
+      <div class="screen__wrapper">
+        <div class="result result--trip">
+          <div class="result__image">
+            <picture>
+              <source srcset="img/result1-mob.png 1x, img/result1-mob@2x.png 2x" media="(max-width: 768px) and (orientation: portrait)">
+              <img src="img/result1.png" srcset="img/result1@2x.png 2x" alt="">
+            </picture>
+          </div>
+          <h2 class="result__title">
+            <span class="visually-hidden">ПОбеда!</span>
+            <svg id="result-title-svg-victory"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.85 109.24"><path d="M13.9 22.94V90.5H.5v-84h72.4v84H59.42V22.94H13.9z" fill="none" stroke="currentColor"/><path d="M146.66 4.1c32.88 0 59.52 19.92 59.52 44.4s-26.64 44.4-59.52 44.4-59.52-19.92-59.52-44.4 26.64-44.4 59.52-44.4zm0 72.12c24.48 0 44.4-12.36 44.4-27.72s-19.92-27.84-44.4-27.84c-24.76 0-44.76 12.36-44.76 27.84s20 27.72 44.76 27.72z" fill="none" stroke="currentColor"/><path d="M285.26 6.5v16.44H233.9v14.4h25.32c25.44 0 34 11.16 34 26.52 0 15.6-8.52 26.64-34 26.64h-38.76v-84h64.8zm-30.48 68.52c15.12 0 23.52-2 23.52-11.52s-8.4-10.56-23.52-10.56H233.9v22.08h20.88z" fill="none" stroke="currentColor"/><path d="M369.37 6.5v16.44h-50.63V40.1h33.6v16.4h-33.6v17.56h50.64V90.5H305.3v-84h64.08z" fill="none" stroke="currentColor"/><path d="M380.29 108.74V74.06h7.44c4.56-4.68 7.8-18.36 8.76-56l.41-11.56h48.6v67.56h10v34.68h-14.73V90.5H394.9v18.24h-14.61zm51.72-34.68V22.94h-22.56v3.12c-.48 22.44-3.24 37.68-7.2 48h29.76z" fill="none" stroke="currentColor"/><path d="M461.65 90.5l28-84h27.12l28.08 84h-13.48l-7.8-23.52h-37.8l-7.8 23.52h-16.32zm56.64-40L504.9 10.34 491.41 50.5h26.88z" fill="none" stroke="currentColor"/><path d="M552.02 68.9L553.45.5h13.45l1.44 68.4h-16.32zm8.28 6.36c4.8 0 8 3.24 8 8.16a8.04 8.04 0 11-16.08 0c.03-4.92 3.27-8.16 8.07-8.16z" fill="none" stroke="currentColor"/></svg>
+          </h2>
+          <div class="result__text">
+            <p>ты&nbsp;отправляешься в&nbsp;Арктику!</p>
+          </div>
+          <div class="result__form">
+            <form action="#" method="post" class="form form--result">
+              <label for="email-field" class="form__label">зарегистрируй результат</label>
+              <input type="email" class="form__field" id="email-field" placeholder="e-mail для регистации результата и получения приза" required="">
+              <button class="form__button btn">
+                отправить
+                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" d="M9 19V1"/><path d="M1 9l8-8 8 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--result" id="result2">
+      <div class="screen__wrapper">
+        <div class="result result--prize">
+          <div class="result__images">
+            <img class="result__image result__image--suitcase" src="img/win-suitcase/suitcase.png" alt="Чемодан" role="presentation">
+            <img class="result__image result__image--flamingo" src="img/win-suitcase/flamingo.png" alt="Фламинго" role="presentation">
+            <img class="result__image result__image--leaf-blue-1" src="img/win-suitcase/leaf-blue-1.png" alt="Синий листочек" role="presentation">
+            <img class="result__image result__image--leaf-blue-2" src="img/win-suitcase/leaf-blue-2.png" alt="Синий листочек" role="presentation">
+            <img class="result__image result__image--leaf-green" src="img/win-suitcase/leaf-green.png" alt="Зелёный листочек" role="presentation">
+          </div>
+          <h2 class="result__title">
+            <span class="visually-hidden">ПОбеда!</span>
+            <svg id="result-title-svg-victory-2"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 568.85 109.24"><path d="M13.9 22.94V90.5H.5v-84h72.4v84H59.42V22.94H13.9z" fill="none" stroke="currentColor"/><path d="M146.66 4.1c32.88 0 59.52 19.92 59.52 44.4s-26.64 44.4-59.52 44.4-59.52-19.92-59.52-44.4 26.64-44.4 59.52-44.4zm0 72.12c24.48 0 44.4-12.36 44.4-27.72s-19.92-27.84-44.4-27.84c-24.76 0-44.76 12.36-44.76 27.84s20 27.72 44.76 27.72z" fill="none" stroke="currentColor"/><path d="M285.26 6.5v16.44H233.9v14.4h25.32c25.44 0 34 11.16 34 26.52 0 15.6-8.52 26.64-34 26.64h-38.76v-84h64.8zm-30.48 68.52c15.12 0 23.52-2 23.52-11.52s-8.4-10.56-23.52-10.56H233.9v22.08h20.88z" fill="none" stroke="currentColor"/><path d="M369.37 6.5v16.44h-50.63V40.1h33.6v16.4h-33.6v17.56h50.64V90.5H305.3v-84h64.08z" fill="none" stroke="currentColor"/><path d="M380.29 108.74V74.06h7.44c4.56-4.68 7.8-18.36 8.76-56l.41-11.56h48.6v67.56h10v34.68h-14.73V90.5H394.9v18.24h-14.61zm51.72-34.68V22.94h-22.56v3.12c-.48 22.44-3.24 37.68-7.2 48h29.76z" fill="none" stroke="currentColor"/><path d="M461.65 90.5l28-84h27.12l28.08 84h-13.48l-7.8-23.52h-37.8l-7.8 23.52h-16.32zm56.64-40L504.9 10.34 491.41 50.5h26.88z" fill="none" stroke="currentColor"/><path d="M552.02 68.9L553.45.5h13.45l1.44 68.4h-16.32zm8.28 6.36c4.8 0 8 3.24 8 8.16a8.04 8.04 0 11-16.08 0c.03-4.92 3.27-8.16 8.07-8.16z" fill="none" stroke="currentColor"/></svg>
+          </h2>
+          <div class="result__text">
+            <p>чемодан &laquo;Fjord&nbsp;Inc.&raquo;&nbsp;твой</p>
+          </div>
+          <div class="result__form">
+            <form action="#" method="post" class="form form--result">
+              <label for="email-field2" class="form__label">зарегистрируй результат</label>
+              <input type="email" class="form__field" id="email-field2" placeholder="e-mail для регистации результата и получения приза" required="">
+              <button class="form__button btn">
+                отправить
+                <svg width="18" height="19" viewBox="0 0 18 19" fill="none" xmlns="http://www.w3.org/2000/svg"><path stroke="currentColor" stroke-width="2" d="M9 19V1"/><path d="M1 9l8-8 8 8" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="screen screen--hidden screen--result" id="result3">
+      <div class="screen__wrapper">
+        <div class="result result--negative">
+          <div class="result__image">
+            <picture>
+              <source srcset="img/result3-mob.png 1x, img/result3-mob@2x.png 2x" media="(max-width: 768px) and (orientation: portrait)">
+              <img src="img/result3.png" srcset="img/result3@2x.png 2x" alt="">
+            </picture>
+          </div>
+          <h2 class="result__title">
+            <span class="visually-hidden">Не угадал!</span>
+            <svg id="result-title-svg-fail"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 660.77 109.24"><path d="M.5 90.5v-84h13.44v34.2h37.2V6.5h13.44v84H51.14V57.14h-37.2V90.5H.5z" fill="none" stroke="currentColor"/><path d="M145.46 6.5v16.44H94.84V40.1h33.6v16.4h-33.6v17.56h50.64V90.5h-64.1v-84h64.08z" fill="none" stroke="currentColor"/><path d="M197.06 6.5l20.52 42.36 15.6-42.36h16.44l-31 84h-16.4l9.48-25.92L183.62 6.5h13.44z" fill="none" stroke="currentColor"/><path d="M271.58 22.94V90.5h-13.44v-84h50.16v16.44h-36.72z" fill="none" stroke="currentColor"/><path d="M304.94 90.5l28-84h27.12l28.08 84h-13.48l-7.82-23.52h-37.8l-7.78 23.52h-16.32zm56.64-40l-13.44-40.16L334.7 50.5h26.88z" fill="none" stroke="currentColor"/><path d="M394.22 108.74V74.06h7.44c4.56-4.68 7.8-18.36 8.76-56l.36-11.56h48.6v67.56h10v34.68H454.7V90.5h-45.86v18.24h-14.62zm51.72-34.68V22.94h-22.56v3.12c-.48 22.44-3.24 37.68-7.2 48h29.76z" fill="none" stroke="currentColor"/><path d="M475.58 90.5l28-84h27.12l28.04 84H545.3l-7.8-23.52h-37.8l-7.8 23.52h-16.32zm56.64-40l-13.44-40.2-13.44 40.2h26.88z" fill="none" stroke="currentColor"/><path d="M566.54 75.38a13.77 13.77 0 005 1c6.6 0 10.44-6.24 12-58.32l.52-11.56h46.2v84h-13.42V22.94h-20.18l-.12 3.12c-1.56 53.44-9.7 66.84-24.96 66.84a28.55 28.55 0 01-6.72-.84z" fill="none" stroke="currentColor"/><path d="M643.94 68.9L645.38.5h13.46l1.44 68.4h-16.34zm8.28 6.36c4.8 0 8 3.24 8 8.16a8.04 8.04 0 01-16.08 0c.04-4.92 3.28-8.16 8.08-8.16z" fill="none" stroke="currentColor"/></svg>
+          </h2>
+          <button class="result__button js-play" type="button">
+            не сдавайся!
+            <span>
+              <svg class="result__button-restart-icon"  width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M10.69 1.48c-5.26 0-9.52 4.26-9.52 9.52s4.26 9.52 9.52 9.52 9.52-4.26 9.52-9.52V7.14" stroke="currentColor" stroke-width="2" stroke-miterlimit="10"/><path d="M15.11 12.51l5.04-5.37 5.16 5.49" stroke="currentColor" stroke-width="2" stroke-miterlimit="10" stroke-linejoin="round"/></svg>
+            </span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<script src="js/script.js"></script></body>
+</html>
