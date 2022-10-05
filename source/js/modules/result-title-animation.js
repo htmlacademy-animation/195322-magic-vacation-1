@@ -14,16 +14,21 @@ const SCALE_OPTIONS = {
 };
 
 const TRANSLATE_OPTIONS_BASE = {
-  delay: 0.075,
+  delay: 0.02,
   offset: 100,
 };
 
 const TRANSLATE_OPTIONS = {
   attributeName: `transform`,
   type: `translate`,
-  values: `0 0; 0 ${TRANSLATE_OPTIONS_BASE.offset}; 0 ${TRANSLATE_OPTIONS_BASE.offset + 25}; 0 ${TRANSLATE_OPTIONS_BASE.offset}`,
-  keyTimes: `0; 0.8; 0.85; 1`,
-  dur: `0.4s`,
+  values: `
+    0 0;
+    0 ${TRANSLATE_OPTIONS_BASE.offset};
+    0 ${TRANSLATE_OPTIONS_BASE.offset - 25};
+    0 ${TRANSLATE_OPTIONS_BASE.offset}
+  `,
+  keyTimes: `0; 0.7; 0.8; 1`,
+  dur: `0.6s`,
   fill: `freeze`,
   additive: `sum`,
 };
@@ -32,7 +37,8 @@ const OPACITY_OPTIONS = {
   attributeName: `opacity`,
 };
 
-const createSvgAnimationElement = (tag) => document.createElementNS(`http://www.w3.org/2000/svg`, tag);
+const createSvgAnimationElement = (tag) =>
+  document.createElementNS(`http://www.w3.org/2000/svg`, tag);
 
 const setAnimationAttributes = ({element, attrs}) => {
   Object.keys(attrs).forEach((key) => {
@@ -58,28 +64,34 @@ const createStrokeAnimation = ({id, begin, length, points, dur}) => {
   });
 };
 
-const createTransformAnimation = ({id, values, begin}) => setAnimationAttributes({
-  element: createSvgAnimationElement(`animateTransform`),
-  attrs: {
-    id,
-    begin,
-    ...values
-  },
-});
+const createTransformAnimation = ({id, values, begin}) =>
+  setAnimationAttributes({
+    element: createSvgAnimationElement(`animateTransform`),
+    attrs: {
+      id,
+      begin,
+      ...values,
+    },
+  });
 
-const createOpacitySet = ({id, to, begin}) => setAnimationAttributes({
-  element: createSvgAnimationElement(`set`),
-  attrs: {
-    id,
-    to,
-    begin,
-    ...OPACITY_OPTIONS,
-  },
-});
+const createOpacitySet = ({id, to, begin}) =>
+  setAnimationAttributes({
+    element: createSvgAnimationElement(`set`),
+    attrs: {
+      id,
+      to,
+      begin,
+      ...OPACITY_OPTIONS,
+    },
+  });
 
 const clearAnimationTags = (animationContainer) => {
   animationContainer.childNodes.forEach((child) => {
-    if (child.tagName === `set` || child.tagName === `animate` || child.tagName === `animateTransform`) {
+    if (
+      child.tagName === `set` ||
+      child.tagName === `animate` ||
+      child.tagName === `animateTransform`
+    ) {
       animationContainer.removeChild(child);
     }
   });
@@ -97,7 +109,7 @@ const createVictoryAnimation = (element) => {
       createOpacitySet({
         id: firstAnimationId,
         to: `1`,
-        begin: `indefinite`
+        begin: `indefinite`,
       })
   );
 
@@ -105,20 +117,22 @@ const createVictoryAnimation = (element) => {
       createTransformAnimation({
         id: `${id}_scale`,
         values: SCALE_OPTIONS,
-        begin: `${firstAnimationId}.begin`
+        begin: `${firstAnimationId}.begin`,
       })
   );
 
   const parts = element.querySelectorAll(`path`);
-  parts.forEach((part, index) => part.appendChild(
-      createStrokeAnimation({
-        id: `${id}_${index + 1}_stroke`,
-        begin: `${firstAnimationId}.begin`,
-        length: part.getTotalLength(),
-        points: 3,
-        dur: `0.5s`,
-      })
-  ));
+  parts.forEach((part, index) =>
+    part.appendChild(
+        createStrokeAnimation({
+          id: `${id}_${index + 1}_stroke`,
+          begin: `${firstAnimationId}.begin`,
+          length: part.getTotalLength(),
+          points: 3,
+          dur: `0.5s`,
+        })
+    )
+  );
 
   document.querySelector(`#${firstAnimationId}`).beginElement();
 };
@@ -127,14 +141,26 @@ const createFailAnimation = (element) => {
   const id = element.id.replace(/-/g, `_`);
   const firstAnimationId = `${id}_1_translate`;
 
-  element.setAttribute(`style`, `transform: translate(0, -${TRANSLATE_OPTIONS_BASE.offset}px); overflow: visible;`);
+  element.setAttribute(
+      `style`,
+      `overflow: visible;`
+  );
 
   const parts = element.querySelectorAll(`path`);
   parts.forEach((part, index) => {
-    const translationId = index === 0 ? firstAnimationId : `${id}_${index + 1}_translate`;
-    const staggeredDelay = TRANSLATE_OPTIONS_BASE.delay / 2 + TRANSLATE_OPTIONS_BASE.delay * 1 / (1 / index + 1);
-    const translationBegin = index === 0 ? `indefinite` : `${id}_${index}_translate.begin + ${staggeredDelay}s`;
-    const opacityBegin = index === 0 ? `${firstAnimationId}.begin + 0.05s` : `${id}_${index}_translate.begin + ${staggeredDelay + 0.05}s`;
+    const translationId =
+      index === 0 ? firstAnimationId : `${id}_${index + 1}_translate`;
+    const staggeredDelay =
+      TRANSLATE_OPTIONS_BASE.delay +
+      (TRANSLATE_OPTIONS_BASE.delay * 1) / (1 / index + 1);
+    const translationBegin =
+      index === 0
+        ? `indefinite`
+        : `${id}_${index}_translate.begin + ${staggeredDelay}s`;
+    const opacityBegin =
+      index === 0
+        ? `${firstAnimationId}.begin + 0.05s`
+        : `${id}_${index}_translate.begin + ${staggeredDelay + 0.05}s`;
     const strokeBegin = opacityBegin;
 
     part.setAttribute(`opacity`, `0`);
@@ -171,7 +197,11 @@ const createFailAnimation = (element) => {
   document.querySelector(`#${firstAnimationId}`).beginElement();
 };
 
-const startAnimationByClick = ({elementSelector, buttonSelector, createAnimation}) => {
+const startAnimationByClick = ({
+  elementSelector,
+  buttonSelector,
+  createAnimation,
+}) => {
   const button = document.querySelector(buttonSelector);
 
   button.addEventListener(`click`, () => {
