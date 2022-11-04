@@ -1,6 +1,6 @@
 import throttle from 'lodash/throttle';
 import GameCountdown from './game-countdown';
-
+import {createFailAnimation} from './result-title-animation';
 export default class FullPageScroll {
   constructor() {
     this.HIDDEN_SCREEN_CLASS_NAME = `screen--hidden`;
@@ -148,8 +148,11 @@ export default class FullPageScroll {
     this.gameCountdown = null;
     const results = document.querySelectorAll(`.screen--result`);
     const targetEl = [].slice.call(results).find((el) => el.getAttribute(`id`) === `result3`);
+    const failTitle = targetEl.querySelector(`#result-title-svg-fail`);
     targetEl.classList.add(`screen--show`);
     targetEl.classList.remove(this.HIDDEN_SCREEN_CLASS_NAME);
+
+    createFailAnimation(failTitle);
 
     let playBtn = document.querySelector(`.js-play`);
     if (playBtn) {

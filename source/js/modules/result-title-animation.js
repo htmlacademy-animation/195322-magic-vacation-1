@@ -137,7 +137,7 @@ const createVictoryAnimation = (element) => {
   document.querySelector(`#${firstAnimationId}`).beginElement();
 };
 
-const createFailAnimation = (element) => {
+export const createFailAnimation = (element) => {
   const id = element.id.replace(/-/g, `_`);
   const firstAnimationId = `${id}_1_translate`;
 
