@@ -1,4 +1,5 @@
 import throttle from 'lodash/throttle';
+import gameCountdown from './game-countdown';
 
 export default class FullPageScroll {
   constructor() {
@@ -6,6 +7,7 @@ export default class FullPageScroll {
     this.ACTIVE_SCREEN_CLASS_NAME = `active`;
     this.VISITED_SCREEN_CLASS_NAME = `visited`;
     this.THROTTLE_TIMEOUT = 1000;
+    this.SCREEN_TRANSITION_TIMEOUT = 100;
     this.scrollFlag = true;
     this.timeout = null;
 
@@ -82,6 +84,14 @@ export default class FullPageScroll {
     } else {
       this.setActiveScreen();
     }
+
+    if (this.screenElements[this.activeScreen].id === `game`) {
+      setTimeout(() => {
+        gameCountdown.startCountdown();
+      }, this.SCREEN_TRANSITION_TIMEOUT);
+    } else {
+      gameCountdown.endCountdown();
+    }
   }
 
   setActiveScreen() {
@@ -89,7 +99,7 @@ export default class FullPageScroll {
     setTimeout(() => {
       this.screenElements[this.activeScreen].classList.add(this.ACTIVE_SCREEN_CLASS_NAME);
       this.screenElements[this.activeScreen].classList.add(this.VISITED_SCREEN_CLASS_NAME);
-    }, 100);
+    }, this.SCREEN_TRANSITION_TIMEOUT);
   }
 
   changeActiveMenuItem() {
