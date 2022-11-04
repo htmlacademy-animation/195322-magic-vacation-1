@@ -10573,6 +10573,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return FullPageScroll; });
 /* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash/throttle */ "./node_modules/lodash/throttle.js");
 /* harmony import */ var lodash_throttle__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash_throttle__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _game_countdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./game-countdown */ "./source/js/modules/game-countdown.js");
+/* harmony import */ var _result_title_animation__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./result-title-animation */ "./source/js/modules/result-title-animation.js");
+
 
 
 class FullPageScroll {
@@ -10581,6 +10584,7 @@ class FullPageScroll {
     this.ACTIVE_SCREEN_CLASS_NAME = `active`;
     this.VISITED_SCREEN_CLASS_NAME = `visited`;
     this.THROTTLE_TIMEOUT = 1000;
+    this.SCREEN_TRANSITION_TIMEOUT = 100;
     this.scrollFlag = true;
     this.timeout = null;
 
@@ -10590,6 +10594,8 @@ class FullPageScroll {
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
     this.onUrlHashChengedHandler = this.onUrlHashChanged.bind(this);
+    this.gameCountdown = null;
+    this.onCountdownTimeEnd = this.onCountdownTimeEnd.bind(this);
   }
 
   init() {
@@ -10657,6 +10663,14 @@ class FullPageScroll {
     } else {
       this.setActiveScreen();
     }
+
+    if (this.screenElements[this.activeScreen].id === `game`) {
+      setTimeout(() => {
+        this.initNewGameCountdown();
+      }, this.SCREEN_TRANSITION_TIMEOUT);
+    } else {
+      this.cancelGameCountdown();
+    }
   }
 
   setActiveScreen() {
@@ -10664,7 +10678,7 @@ class FullPageScroll {
     setTimeout(() => {
       this.screenElements[this.activeScreen].classList.add(this.ACTIVE_SCREEN_CLASS_NAME);
       this.screenElements[this.activeScreen].classList.add(this.VISITED_SCREEN_CLASS_NAME);
-    }, 100);
+    }, this.SCREEN_TRANSITION_TIMEOUT);
   }
 
   changeActiveMenuItem() {
@@ -10693,6 +10707,142 @@ class FullPageScroll {
     } else {
       this.activeScreen = Math.max(0, --this.activeScreen);
     }
+  }
+
+  initNewGameCountdown() {
+    this.gameCountdown = new _game_countdown__WEBPACK_IMPORTED_MODULE_1__["default"](this.onCountdownTimeEnd);
+
+    this.gameCountdown.startCountdown();
+  }
+
+  cancelGameCountdown() {
+    this.gameCountdown.endCountdown();
+
+    this.gameCountdown = null;
+  }
+
+  onCountdownTimeEnd() {
+    this.gameCountdown = null;
+    const results = document.querySelectorAll(`.screen--result`);
+    const targetEl = [].slice.call(results).find((el) => el.getAttribute(`id`) === `result3`);
+    const failTitle = targetEl.querySelector(`#result-title-svg-fail`);
+    targetEl.classList.add(`screen--show`);
+    targetEl.classList.remove(this.HIDDEN_SCREEN_CLASS_NAME);
+
+    Object(_result_title_animation__WEBPACK_IMPORTED_MODULE_2__["createFailAnimation"])(failTitle);
+
+    let playBtn = document.querySelector(`.js-play`);
+    if (playBtn) {
+      playBtn.addEventListener(`click`, () => {
+        this.initNewGameCountdown.call(this);
+      }, {once: true});
+    }
+  }
+}
+
+
+/***/ }),
+
+/***/ "./source/js/modules/game-countdown.js":
+/*!*********************************************!*\
+  !*** ./source/js/modules/game-countdown.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return GameCountdown; });
+class GameCountdown {
+  constructor(onTimeEndCallback) {
+    this.animationDuration = 300000; // 5 минут в миллисекундах
+    this.timePerFrame = 1000; // обновляем раз в секунду
+
+    this.lastFrameUpdateTime = null;
+    this.timePassedSinceLastUpdate = null;
+    this.animationStartTime = null;
+
+    this.animationRequest = null;
+
+    this.startCountdown = this.startCountdown.bind(this);
+    this.endCountdown = this.endCountdown.bind(this);
+    this.draw = this.draw.bind(this);
+    this.prepareLayout = this.prepareLayout.bind(this);
+    this.getAmountOfTimeLeft = this.getAmountOfTimeLeft.bind(this);
+    this.updateValues = this.updateValues.bind(this);
+    this.onTimeEndCallback = onTimeEndCallback;
+  }
+
+  startCountdown() {
+    this.animationRequest = requestAnimationFrame(this.draw);
+    this.prepareLayout();
+  }
+
+  endCountdown() {
+    if (this.animationRequest) {
+      cancelAnimationFrame(this.animationRequest);
+      this.animationRequest = null;
+      this.lastFrameUpdateTime = null;
+      this.timePassedSinceLastUpdate = null;
+      this.animationStartTime = null;
+      this.updateValues(this.animationDuration);
+    }
+  }
+
+  onTimeEnd() {
+    if (this.animationRequest) {
+      cancelAnimationFrame(this.animationRequest);
+    }
+
+    this.onTimeEndCallback();
+  }
+
+  draw(currentTime) {
+    if (!this.animationStartTime) {
+      this.animationStartTime = currentTime;
+    }
+    if (!this.lastFrameUpdateTime) {
+      this.lastFrameUpdateTime = currentTime;
+    }
+    this.timePassedSinceLastUpdate = currentTime - this.lastFrameUpdateTime;
+
+    if (this.timePassedSinceLastUpdate > this.timePerFrame) {
+      this.lastFrameUpdateTime = currentTime;
+
+      const currentCountdownValue = this.getAmountOfTimeLeft(Math.round(currentTime / 1000) * 1000);
+
+      if (currentCountdownValue < 0) {
+        this.onTimeEnd();
+        return;
+      }
+
+      this.updateValues(currentCountdownValue);
+    }
+
+    if (this.animationRequest) {
+      requestAnimationFrame(this.draw);
+    }
+  }
+
+  prepareLayout() {
+    const timerElement = document.querySelector(`.game__counter`);
+    this.minutes = timerElement.querySelector(`span:first-child`);
+    this.seconds = timerElement.querySelector(`span:last-child`);
+  }
+
+  getAmountOfTimeLeft(currentTime) {
+    return this.animationDuration - (currentTime - this.animationStartTime);
+  }
+
+  updateValues(time) {
+    const minutes = new Date(time).getMinutes();
+    const seconds = new Date(time).getSeconds();
+
+    const paddedMinutes = String(minutes).padStart(2, 0);
+    const paddedSeconds = String(seconds).padStart(2, 0);
+
+    this.minutes.innerHTML = paddedMinutes;
+    this.seconds.innerHTML = paddedSeconds;
   }
 }
 
@@ -10765,11 +10915,12 @@ __webpack_require__.r(__webpack_exports__);
 /*!*****************************************************!*\
   !*** ./source/js/modules/result-title-animation.js ***!
   \*****************************************************/
-/*! exports provided: default */
+/*! exports provided: createFailAnimation, default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "createFailAnimation", function() { return createFailAnimation; });
 const STROKE_OPTIONS = {
   attributeName: `stroke-dasharray`,
   fill: `freeze`,
