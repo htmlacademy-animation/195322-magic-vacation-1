@@ -1,5 +1,5 @@
-class Countdown {
-  constructor() {
+export default class GameCountdown {
+  constructor(onTimeEndCallback) {
     this.animationDuration = 300000; // 5 минут в миллисекундах
     this.timePerFrame = 1000; // обновляем раз в секунду
 
@@ -15,6 +15,7 @@ class Countdown {
     this.prepareLayout = this.prepareLayout.bind(this);
     this.getAmountOfTimeLeft = this.getAmountOfTimeLeft.bind(this);
     this.updateValues = this.updateValues.bind(this);
+    this.onTimeEndCallback = onTimeEndCallback;
   }
 
   startCountdown() {
@@ -33,6 +34,14 @@ class Countdown {
     }
   }
 
+  onTimeEnd() {
+    if (this.animationRequest) {
+      cancelAnimationFrame(this.animationRequest);
+    }
+
+    this.onTimeEndCallback();
+  }
+
   draw(currentTime) {
     if (!this.animationStartTime) {
       this.animationStartTime = currentTime;
@@ -48,7 +57,7 @@ class Countdown {
       const currentCountdownValue = this.getAmountOfTimeLeft(Math.round(currentTime / 1000) * 1000);
 
       if (currentCountdownValue < 0) {
-        this.animationRequest = null;
+        this.onTimeEnd();
         return;
       }
 
@@ -81,7 +90,3 @@ class Countdown {
     this.seconds.innerHTML = paddedSeconds;
   }
 }
-
-const gameCountdown = new Countdown();
-
-export default gameCountdown;

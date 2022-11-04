@@ -1,5 +1,5 @@
 import throttle from 'lodash/throttle';
-import gameCountdown from './game-countdown';
+import GameCountdown from './game-countdown';
 
 export default class FullPageScroll {
   constructor() {
@@ -17,6 +17,8 @@ export default class FullPageScroll {
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
     this.onUrlHashChengedHandler = this.onUrlHashChanged.bind(this);
+    this.gameCountdown = null;
+    this.onCountdownTimeEnd = this.onCountdownTimeEnd.bind(this);
   }
 
   init() {
@@ -87,10 +89,10 @@ export default class FullPageScroll {
 
     if (this.screenElements[this.activeScreen].id === `game`) {
       setTimeout(() => {
-        gameCountdown.startCountdown();
+        this.initNewGameCountdown();
       }, this.SCREEN_TRANSITION_TIMEOUT);
     } else {
-      gameCountdown.endCountdown();
+      this.cancelGameCountdown();
     }
   }
 
@@ -127,6 +129,33 @@ export default class FullPageScroll {
       this.activeScreen = Math.min(this.screenElements.length - 1, ++this.activeScreen);
     } else {
       this.activeScreen = Math.max(0, --this.activeScreen);
+    }
+  }
+
+  initNewGameCountdown() {
+    this.gameCountdown = new GameCountdown(this.onCountdownTimeEnd);
+
+    this.gameCountdown.startCountdown();
+  }
+
+  cancelGameCountdown() {
+    this.gameCountdown.endCountdown();
+
+    this.gameCountdown = null;
+  }
+
+  onCountdownTimeEnd() {
+    this.gameCountdown = null;
+    const results = document.querySelectorAll(`.screen--result`);
+    const targetEl = [].slice.call(results).find((el) => el.getAttribute(`id`) === `result3`);
+    targetEl.classList.add(`screen--show`);
+    targetEl.classList.remove(this.HIDDEN_SCREEN_CLASS_NAME);
+
+    let playBtn = document.querySelector(`.js-play`);
+    if (playBtn) {
+      playBtn.addEventListener(`click`, () => {
+        this.initNewGameCountdown.call(this);
+      }, {once: true});
     }
   }
 }
