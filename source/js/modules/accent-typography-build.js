@@ -1,3 +1,4 @@
+// TODO: переписать модуль accent-typography-build по аналогии с award-animation
 export default class AccentTypographyBuild {
   /**
    * Инициализирует AccentTypographyBuild.

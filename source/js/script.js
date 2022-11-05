@@ -10,7 +10,7 @@ import form from './modules/form.js';
 import social from './modules/social.js';
 import FullPageScroll from './modules/full-page-scroll';
 import AccentTypographyBuild from './modules/accent-typography-build';
-import svgAnimation from './modules/svg-animation';
+import awardAnimation from './modules/award-animation';
 import resultTitleAnimation from './modules/result-title-animation';
 
 // init modules
@@ -23,12 +23,13 @@ chat();
 result();
 form();
 social();
-svgAnimation();
+awardAnimation();
 resultTitleAnimation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
 
+// TODO: переписать модуль accent-typography-build по аналогии с award-animation
 const introTitleAnimation = new AccentTypographyBuild(
     `.intro__title`,
     600,
