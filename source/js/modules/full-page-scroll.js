@@ -1,11 +1,13 @@
 import throttle from 'lodash/throttle';
-
+import GameCountdown from './game-countdown';
+import {createFailAnimation} from './result-title-animation';
 export default class FullPageScroll {
   constructor() {
     this.HIDDEN_SCREEN_CLASS_NAME = `screen--hidden`;
     this.ACTIVE_SCREEN_CLASS_NAME = `active`;
     this.VISITED_SCREEN_CLASS_NAME = `visited`;
     this.THROTTLE_TIMEOUT = 1000;
+    this.SCREEN_TRANSITION_TIMEOUT = 100;
     this.scrollFlag = true;
     this.timeout = null;
 
@@ -15,6 +17,8 @@ export default class FullPageScroll {
     this.activeScreen = 0;
     this.onScrollHandler = this.onScroll.bind(this);
     this.onUrlHashChengedHandler = this.onUrlHashChanged.bind(this);
+    this.gameCountdown = null;
+    this.onCountdownTimeEnd = this.onCountdownTimeEnd.bind(this);
   }
 
   init() {
@@ -82,6 +86,14 @@ export default class FullPageScroll {
     } else {
       this.setActiveScreen();
     }
+
+    if (this.screenElements[this.activeScreen].id === `game`) {
+      setTimeout(() => {
+        this.initNewGameCountdown();
+      }, this.SCREEN_TRANSITION_TIMEOUT);
+    } else {
+      this.cancelGameCountdown();
+    }
   }
 
   setActiveScreen() {
@@ -89,7 +101,7 @@ export default class FullPageScroll {
     setTimeout(() => {
       this.screenElements[this.activeScreen].classList.add(this.ACTIVE_SCREEN_CLASS_NAME);
       this.screenElements[this.activeScreen].classList.add(this.VISITED_SCREEN_CLASS_NAME);
-    }, 100);
+    }, this.SCREEN_TRANSITION_TIMEOUT);
   }
 
   changeActiveMenuItem() {
@@ -117,6 +129,36 @@ export default class FullPageScroll {
       this.activeScreen = Math.min(this.screenElements.length - 1, ++this.activeScreen);
     } else {
       this.activeScreen = Math.max(0, --this.activeScreen);
+    }
+  }
+
+  initNewGameCountdown() {
+    this.gameCountdown = new GameCountdown(this.onCountdownTimeEnd);
+
+    this.gameCountdown.startCountdown();
+  }
+
+  cancelGameCountdown() {
+    this.gameCountdown.endCountdown();
+
+    this.gameCountdown = null;
+  }
+
+  onCountdownTimeEnd() {
+    this.gameCountdown = null;
+    const results = document.querySelectorAll(`.screen--result`);
+    const targetEl = [].slice.call(results).find((el) => el.getAttribute(`id`) === `result3`);
+    const failTitle = targetEl.querySelector(`#result-title-svg-fail`);
+    targetEl.classList.add(`screen--show`);
+    targetEl.classList.remove(this.HIDDEN_SCREEN_CLASS_NAME);
+
+    createFailAnimation(failTitle);
+
+    let playBtn = document.querySelector(`.js-play`);
+    if (playBtn) {
+      playBtn.addEventListener(`click`, () => {
+        this.initNewGameCountdown.call(this);
+      }, {once: true});
     }
   }
 }

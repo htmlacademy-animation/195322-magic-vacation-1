@@ -389,10 +389,16 @@
 }
 
 .result--negative {
+  position: relative;
+
   .result__title {
+    position: absolute;
+    left: 50%;
+    top: 155px;
     margin-top: 9.5rem;
     width: 66.5rem;
     height: 11.3rem;
+    transform: translateX(-50%);
 
     @media (min-width: $stop-scaling) {
       margin-top: 95px;
