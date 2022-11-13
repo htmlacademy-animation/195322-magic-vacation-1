@@ -10263,19 +10263,69 @@ module.exports = code;
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return AccentTypographyBuild; });
-// TODO: переписать модуль accent-typography-build по аналогии с award-animation
+const targets = [
+  {
+    elementSelector: `.intro__title`,
+    timer: 600,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: false,
+    delay: 1000
+  },
+  {
+    elementSelector: `.intro__date`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 2400
+  },
+  {
+    elementSelector: `.slider__item-title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  },
+  {
+    elementSelector: `.prizes__title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  },
+  {
+    elementSelector: `.rules__title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  },
+  {
+    elementSelector: `.game__title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  }
+];
+
 class AccentTypographyBuild {
   /**
    * Инициализирует AccentTypographyBuild.
-   * @param { string } elementSelector - селектор, соотв. исходному блоку текста
-   * @param { number } timer - время анимации отдельной буквы
-   * @param { string } classForActivate - название класса для анимации
-   * @param { string } property - анимируемое css-свойство
-   * @param { boolean } isOneWord - если абзац состоит из одного слова
-   * @param { number } delay - задержка анимации для всего блока
+   * @param {Object} typographyElement
+   * @param { string } typographyElement.elementSelector - селектор, соотв. исходному блоку текста.
+   * @param { number } typographyElement.timer - время анимации отдельной буквы.
+   * @param { string } typographyElement.classForActivate - название класса для анимации.
+   * @param { string } typographyElement.property - анимируемое css-свойство.
+   * @param { boolean } typographyElement.isOneWord - если абзац состоит из одного слова.
+   * @param { number } typographyElement.delay - задержка анимации для всего блока.
    */
-  constructor(elementSelector, timer, classForActivate, property, isOneWord, delay) {
+  constructor({elementSelector, timer, classForActivate, property, isOneWord, delay}) {
     this.ONE_LETTER_DURATION = 50;
 
     this.elementSelector = elementSelector;
@@ -10338,7 +10388,6 @@ class AccentTypographyBuild {
    * Заменяет содержимое исходного элемента.
    */
   prePareText() {
-    console.log(`prepare text`);
     if (!this.element) {
       return;
     }
@@ -10386,6 +10435,15 @@ class AccentTypographyBuild {
 }
 
 
+/* harmony default export */ __webpack_exports__["default"] = (() => {
+  targets.forEach(({elementSelector, timer, classForActivate, property, isOneWord, delay}) => {
+    const typographyAnimation = new AccentTypographyBuild({elementSelector, timer, classForActivate, property, isOneWord, delay});
+
+    typographyAnimation.runAnimation();
+  });
+});
+
+
 /***/ }),
 
 /***/ "./source/js/modules/award-animation.js":
@@ -10422,7 +10480,21 @@ const targets = [
   }
 ];
 
+/**
+ * Добавляет/удаляет специальные классы для запуска анимаций призов.
+ * Создаёт экземляры класса PrizesCountersAnimation для анимации количества призов.
+ * @class AwardAnimation
+ */
 class AwardAnimation {
+  /**
+   * Инициализирует AwardAnimation.
+   * @param {Object} animatedAward - свойства анимаруемого элемента награды.
+   * @param {string} animatedAward.animateTarget - id базовой svg-анимации текущего приза.
+   * @param {number} animatedAward.descriptionAppearDelay — задержка анимации.
+   * @param {string} animatedAward.parent - id родительского элемента списка текущего приза.
+   * @param {number} animatedAward.firstAmount — начальное значение длё анимации кол-ва призов.
+   * @param {number} animatedAward.finalAmount - финальное значение для анимации кол-ва призов.
+   */
   constructor({animateTarget, descriptionAppearDelay, parent, firstAmount, finalAmount}) {
     this.ANIMATED_CLASS_NAME = `animated`;
 
@@ -10877,7 +10949,16 @@ class FullPageScroll {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return GameCountdown; });
+/**
+ * Создаёт анимацию таймера обратного отсчёта в игре.
+ * @export
+ * @class GameCountdown
+ */
 class GameCountdown {
+  /**
+   * Creates an instance of GameCountdown.
+   * @param {requestCallback} onTimeEndCallback - функция, вызываемая по истечении времени таймера.
+   */
   constructor(onTimeEndCallback) {
     this.animationDuration = 300000; // 5 минут в миллисекундах
     this.timePerFrame = 1000; // обновляем раз в секунду
@@ -11045,8 +11126,20 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PrizesCountersAnimation", function() { return PrizesCountersAnimation; });
-// TODO: когда подтянутся изменения из module4-task1, сделать класс PrizesCountersAnimation как extends GameCountdown
+/**
+ * Создаёт анимацию элемента числа с заданными начальным и конечным значениями.
+ * @export
+ * @class PrizesCountersAnimation
+ */
 class PrizesCountersAnimation {
+  /**
+   * Инициализирует PrizesCountersAnimation.
+   * @param {Object} animatedNumber - свойства анимируемого числа.
+   * @param {Element} animatedNumber.targetElement - целевой элемент анимации.
+   * @param {number} animatedNumber.firstAmount - начальное значение, по умолчанию = 1.
+   * @param {number} animatedNumber.finalAmount - целевое значение.
+   * @param {requestCallback} animatedNumber.onEndAnimationCallback - функция, вызываемая при окончании анимации.
+   */
   constructor({targetElement, firstAmount = 1, finalAmount, onEndAnimationCallback}) {
     this.animationDuration = 1000;
     this.timePerFrame = 1000 / 12; // 12 кадров в секунду
@@ -11102,7 +11195,7 @@ class PrizesCountersAnimation {
    * за время, равное animationDuration.
    * Значение currentAmount передаётся в вызываемый метод updateValues(), пока <= finalAmount.
    * При окончании анимации происходит вызов метода endEnumeration().
-   * @param {number} currentTime - время, прошедшее с начала выполнения запроса в мс
+   * @param {number} currentTime - время, прошедшее с начала выполнения запроса в мс.
    * @return {void}
    */
   draw(currentTime) {
@@ -11137,13 +11230,18 @@ class PrizesCountersAnimation {
     }
   }
 
+  /**
+   * Устанавливает начальное положение счётчика в заданную величину (1 по умолч.).
+   * Затем при каждом вызове увеличивает счётчик на вычисленное значение increment.
+   * @return {number} - возвращает новое увеличенное значение.
+   */
   getAmount() {
     return this.counter === 0 ? this.firstAmount : Math.ceil(this.previousAmount + this.increment);
   }
 
   /**
    * Записывает в разметку targetElement передаваемое значение.
-   * @param {number} amount - текущее значение, которое нужно записать в целевой элемент
+   * @param {number} amount - текущее значение, которое нужно записать в целевой элемент.
    */
   updateValues(amount) {
     this.targetElement.innerHTML = amount;
@@ -11666,73 +11764,12 @@ Object(_modules_chat_js__WEBPACK_IMPORTED_MODULE_5__["default"])();
 Object(_modules_result_js__WEBPACK_IMPORTED_MODULE_6__["default"])();
 Object(_modules_form_js__WEBPACK_IMPORTED_MODULE_7__["default"])();
 Object(_modules_social_js__WEBPACK_IMPORTED_MODULE_8__["default"])();
+Object(_modules_accent_typography_build__WEBPACK_IMPORTED_MODULE_10__["default"])();
 Object(_modules_award_animation__WEBPACK_IMPORTED_MODULE_11__["default"])();
 Object(_modules_result_title_animation__WEBPACK_IMPORTED_MODULE_12__["default"])();
 
 const fullPageScroll = new _modules_full_page_scroll__WEBPACK_IMPORTED_MODULE_9__["default"]();
 fullPageScroll.init();
-
-// TODO: переписать модуль accent-typography-build по аналогии с award-animation
-const introTitleAnimation = new _modules_accent_typography_build__WEBPACK_IMPORTED_MODULE_10__["default"](
-    `.intro__title`,
-    600,
-    `active-animation`,
-    `transform`,
-    false,
-    1000
-);
-
-const contestDateAnimation = new _modules_accent_typography_build__WEBPACK_IMPORTED_MODULE_10__["default"](
-    `.intro__date`,
-    500,
-    `active-animation`,
-    `transform`,
-    true,
-    2400
-);
-
-const historyTitleAnimation = new _modules_accent_typography_build__WEBPACK_IMPORTED_MODULE_10__["default"](
-    `.slider__item-title`,
-    500,
-    `active-animation`,
-    `transform`,
-    true,
-    0
-);
-
-const prizesTitleAnimation = new _modules_accent_typography_build__WEBPACK_IMPORTED_MODULE_10__["default"](
-    `.prizes__title`,
-    500,
-    `active-animation`,
-    `transform`,
-    true,
-    0
-);
-
-const rulesTitleAnimation = new _modules_accent_typography_build__WEBPACK_IMPORTED_MODULE_10__["default"](
-    `.rules__title`,
-    500,
-    `active-animation`,
-    `transform`,
-    true,
-    0
-);
-
-const gameTitleAnimation = new _modules_accent_typography_build__WEBPACK_IMPORTED_MODULE_10__["default"](
-    `.game__title`,
-    500,
-    `active-animation`,
-    `transform`,
-    true,
-    0
-);
-
-introTitleAnimation.runAnimation();
-contestDateAnimation.runAnimation();
-historyTitleAnimation.runAnimation();
-prizesTitleAnimation.runAnimation();
-rulesTitleAnimation.runAnimation();
-gameTitleAnimation.runAnimation();
 
 
 /***/ }),
