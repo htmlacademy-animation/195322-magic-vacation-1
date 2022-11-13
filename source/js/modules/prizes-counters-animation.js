@@ -1,5 +1,17 @@
-// TODO: когда подтянутся изменения из module4-task1, сделать класс PrizesCountersAnimation как extends GameCountdown
+/**
+ * Создаёт анимацию элемента числа с заданными начальным и конечным значениями.
+ * @export
+ * @class PrizesCountersAnimation
+ */
 export class PrizesCountersAnimation {
+  /**
+   * Инициализирует PrizesCountersAnimation.
+   * @param {Object} animatedNumber - свойства анимируемого числа.
+   * @param {Element} animatedNumber.targetElement - целевой элемент анимации.
+   * @param {number} animatedNumber.firstAmount - начальное значение, по умолчанию = 1.
+   * @param {number} animatedNumber.finalAmount - целевое значение.
+   * @param {requestCallback} animatedNumber.onEndAnimationCallback - функция, вызываемая при окончании анимации.
+   */
   constructor({targetElement, firstAmount = 1, finalAmount, onEndAnimationCallback}) {
     this.animationDuration = 1000;
     this.timePerFrame = 1000 / 12; // 12 кадров в секунду
@@ -55,7 +67,7 @@ export class PrizesCountersAnimation {
    * за время, равное animationDuration.
    * Значение currentAmount передаётся в вызываемый метод updateValues(), пока <= finalAmount.
    * При окончании анимации происходит вызов метода endEnumeration().
-   * @param {number} currentTime - время, прошедшее с начала выполнения запроса в мс
+   * @param {number} currentTime - время, прошедшее с начала выполнения запроса в мс.
    * @return {void}
    */
   draw(currentTime) {
@@ -90,13 +102,18 @@ export class PrizesCountersAnimation {
     }
   }
 
+  /**
+   * Устанавливает начальное положение счётчика в заданную величину (1 по умолч.).
+   * Затем при каждом вызове увеличивает счётчик на вычисленное значение increment.
+   * @return {number} - возвращает новое увеличенное значение.
+   */
   getAmount() {
     return this.counter === 0 ? this.firstAmount : Math.ceil(this.previousAmount + this.increment);
   }
 
   /**
    * Записывает в разметку targetElement передаваемое значение.
-   * @param {number} amount - текущее значение, которое нужно записать в целевой элемент
+   * @param {number} amount - текущее значение, которое нужно записать в целевой элемент.
    */
   updateValues(amount) {
     this.targetElement.innerHTML = amount;

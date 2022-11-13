@@ -22,7 +22,21 @@ const targets = [
   }
 ];
 
+/**
+ * Добавляет/удаляет специальные классы для запуска анимаций призов.
+ * Создаёт экземляры класса PrizesCountersAnimation для анимации количества призов.
+ * @class AwardAnimation
+ */
 class AwardAnimation {
+  /**
+   * Инициализирует AwardAnimation.
+   * @param {Object} animatedAward - свойства анимаруемого элемента награды.
+   * @param {string} animatedAward.animateTarget - id базовой svg-анимации текущего приза.
+   * @param {number} animatedAward.descriptionAppearDelay — задержка анимации.
+   * @param {string} animatedAward.parent - id родительского элемента списка текущего приза.
+   * @param {number} animatedAward.firstAmount — начальное значение длё анимации кол-ва призов.
+   * @param {number} animatedAward.finalAmount - финальное значение для анимации кол-ва призов.
+   */
   constructor({animateTarget, descriptionAppearDelay, parent, firstAmount, finalAmount}) {
     this.ANIMATED_CLASS_NAME = `animated`;
 
