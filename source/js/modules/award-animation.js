@@ -70,6 +70,10 @@ class AwardAnimation {
     this.isPlayed = true;
   }
 
+  /**
+   * Этот коллбэк добавляет элементу класс animated
+   * @callback requestCallback
+   */
   onEndAnimation() {
     this.awardEl.classList.add(this.ANIMATED_CLASS_NAME);
   }
@@ -88,7 +92,12 @@ class AwardAnimation {
       return;
     }
 
-    this.numberAnimation = new PrizesCountersAnimation(numberEl, this.firstAmount, this.finalAmount, this.onEndAnimation);
+    this.numberAnimation = new PrizesCountersAnimation({
+      targetElement: numberEl,
+      firstAmount: this.firstAmount,
+      finalAmount: this.finalAmount,
+      onEndAnimationCallback: this.onEndAnimation
+    });
   }
 }
 

@@ -1,20 +1,13 @@
 // TODO: когда подтянутся изменения из module4-task1, сделать класс PrizesCountersAnimation как extends GameCountdown
 export class PrizesCountersAnimation {
-  /**
-   * Инициализирует PrizesCountersAnimation.
-   * @param {Element} targetElement - целевой элемент анимации
-   * @param {number} firstAmount - начальное значение, по умолчанию = 1
-   * @param {number} finalAmount - целевое значение
-   * @param {function} onEndAnimationCallback - efef
-   */
-  constructor(targetElement, firstAmount = 1, finalAmount, onEndAnimationCallback) {
-    this.animationDuration = 750;
+  constructor({targetElement, firstAmount = 1, finalAmount, onEndAnimationCallback}) {
+    this.animationDuration = 1000;
     this.timePerFrame = 1000 / 12; // 12 кадров в секунду
     this.targetElement = targetElement;
 
     this.firstAmount = firstAmount;
-    this.increment = this.finalAmount / (this.animationDuration / this.timePerFrame);
     this.finalAmount = finalAmount;
+    this.increment = this.finalAmount / (this.animationDuration / this.timePerFrame);
     this.previousAmount = this.firstAmount;
     this.counter = 0;
 
@@ -81,9 +74,9 @@ export class PrizesCountersAnimation {
     }
 
     if (this.timePassedSinceLastUpdate > this.timePerFrame) {
-      const currentAmount = this.getAmount();
-
       this.lastFrameUpdateTime = currentTime;
+
+      const currentAmount = this.getAmount();
 
       if (currentAmount <= this.finalAmount) {
         this.updateValues(currentAmount);
