@@ -1,4 +1,13 @@
+/**
+ * Создаёт анимацию таймера обратного отсчёта в игре.
+ * @export
+ * @class GameCountdown
+ */
 export default class GameCountdown {
+  /**
+   * Creates an instance of GameCountdown.
+   * @param {requestCallback} onTimeEndCallback - функция, вызываемая по истечении времени таймера.
+   */
   constructor(onTimeEndCallback) {
     this.animationDuration = 300000; // 5 минут в миллисекундах
     this.timePerFrame = 1000; // обновляем раз в секунду

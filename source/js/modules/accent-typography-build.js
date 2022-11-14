@@ -1,14 +1,66 @@
-export default class AccentTypographyBuild {
+const targets = [
+  {
+    elementSelector: `.intro__title`,
+    timer: 600,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: false,
+    delay: 1000
+  },
+  {
+    elementSelector: `.intro__date`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 2400
+  },
+  {
+    elementSelector: `.slider__item-title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  },
+  {
+    elementSelector: `.prizes__title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  },
+  {
+    elementSelector: `.rules__title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  },
+  {
+    elementSelector: `.game__title`,
+    timer: 500,
+    classForActivate: `active-animation`,
+    property: `transform`,
+    isOneWord: true,
+    delay: 0
+  }
+];
+
+class AccentTypographyBuild {
   /**
    * Инициализирует AccentTypographyBuild.
-   * @param { string } elementSelector - селектор, соотв. исходному блоку текста
-   * @param { number } timer - время анимации отдельной буквы
-   * @param { string } classForActivate - название класса для анимации
-   * @param { string } property - анимируемое css-свойство
-   * @param { boolean } isOneWord - если абзац состоит из одного слова
-   * @param { number } delay - задержка анимации для всего блока
+   * @param {Object} typographyElement
+   * @param { string } typographyElement.elementSelector - селектор, соотв. исходному блоку текста.
+   * @param { number } typographyElement.timer - время анимации отдельной буквы.
+   * @param { string } typographyElement.classForActivate - название класса для анимации.
+   * @param { string } typographyElement.property - анимируемое css-свойство.
+   * @param { boolean } typographyElement.isOneWord - если абзац состоит из одного слова.
+   * @param { number } typographyElement.delay - задержка анимации для всего блока.
    */
-  constructor(elementSelector, timer, classForActivate, property, isOneWord, delay) {
+  constructor({elementSelector, timer, classForActivate, property, isOneWord, delay}) {
     this.ONE_LETTER_DURATION = 50;
 
     this.elementSelector = elementSelector;
@@ -71,7 +123,6 @@ export default class AccentTypographyBuild {
    * Заменяет содержимое исходного элемента.
    */
   prePareText() {
-    console.log(`prepare text`);
     if (!this.element) {
       return;
     }
@@ -117,3 +168,12 @@ export default class AccentTypographyBuild {
     this.element.classList.remove(this.classForActivate);
   }
 }
+
+
+export default () => {
+  targets.forEach(({elementSelector, timer, classForActivate, property, isOneWord, delay}) => {
+    const typographyAnimation = new AccentTypographyBuild({elementSelector, timer, classForActivate, property, isOneWord, delay});
+
+    typographyAnimation.runAnimation();
+  });
+};
