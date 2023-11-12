@@ -20,6 +20,11 @@
   @media (max-width: $mobile) and (orientation: landscape) {
     padding: 3rem 0;
   }
+
+  &--trip .result__image,
+  &--negative .result__image {
+    display: none;
+  }
 }
 
 .result__images {
@@ -173,6 +178,14 @@
     animation-timing-function: ease-in-out;
     animation-delay: 1.6s;
   }
+}
+
+.result__canvas {
+  display: block;
+  height: 100vmin;
+  width: 100vmin;
+  margin: 0 auto;
+  background-color: $c-dark;
 }
 
 .result__title {

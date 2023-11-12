@@ -12,6 +12,7 @@ import FullPageScroll from './modules/full-page-scroll';
 import accentTypographyBuild from './modules/accent-typography-build';
 import awardAnimation from './modules/award-animation';
 import resultTitleAnimation from './modules/result-title-animation';
+import WalrusAndAirplaneScene from './modules/walrus-canvas-animation';
 
 // init modules
 document();
@@ -29,3 +30,5 @@ resultTitleAnimation();
 
 const fullPageScroll = new FullPageScroll();
 fullPageScroll.init();
+
+const walrusScene = new WalrusAndAirplaneScene();
